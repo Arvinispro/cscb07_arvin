@@ -1,12 +1,12 @@
-import <iostream>; // This is the C++ I/O
+#include <iostream> // This is the C++ I/O
 
 int main()
 {
-	std::cout << "Hello World" << endl;
+	std::cout << "Hello World" << std::endl;
 	std::count << "H";
 	std::count << "i";
 	std::count << "!";
-std:
+	
 	endl; // This is end of line, and it also flushes output buffer
 
 	using namespace std; // omit "std::" prefix

@@ -6,9 +6,15 @@
                 "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/clang++",
             "cStandard": "gnu17",
-            "intelliSenseMode": "macos-clang-arm64"
+            "intelliSenseMode": "macos-clang-arm64",
+            "cppStandard": "c++23",
+            "compilerArgs": [
+                "-fmodules",
+                "-fimplicit-modules",
+                "-fbuiltin-module-map"
+            ]
         }
     ],
     "version": 4
