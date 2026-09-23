@@ -1,4 +1,4 @@
-import <iostream>; // This is the C++ I/O. 
+import <iostream>; // This is the C++ I/O
 
 int main()
 {
