@@ -1,2 +1,0 @@
-Write code in local -> Push it to github(cscb07_arvin)
-In mathlab, git pull -> run "g++20h iostream" to apply the functions -> g++20 <filename>.cc 
