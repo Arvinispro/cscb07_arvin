@@ -4,6 +4,7 @@ A0: https://cdn-uploads.piazza.com/paste/mp2zcrg0cja1kz/96fe3c623db0b52121987447
 
 Submit assignments
 cd cscb07/submissions/yangy607
+(If any new assignments came) git pull
 cd <Ax>
 cp /path/of/file . # copy the file into current directory
 git add .
