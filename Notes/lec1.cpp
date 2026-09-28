@@ -3,10 +3,10 @@
 int main()
 {
 	std::cout << "Hello World" << std::endl;
-	std::count << "H";
-	std::count << "i";
-	std::count << "!";
-	
+	std::cout << "H";
+	std::cout << "i";
+	std::cout << "!";
+
 	endl; // This is end of line, and it also flushes output buffer
 
 	using namespace std; // omit "std::" prefix
