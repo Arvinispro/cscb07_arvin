@@ -1,6 +1,6 @@
 //client code(main.cc)
 import point;
-#include <iostream>;
+#include <iostream>
 
 int main(){
   Point p(1,2);
