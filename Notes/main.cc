@@ -1,10 +1,10 @@
 //client code(main.cc)
-import point;
 #include <iostream>
+import point;
 
 int main(){
   Point p(1,2);
-  std::cout << p<<std::endl;
+  std::cout << p.x<<std::endl;
   p = p+p;
-  std::cout << p<<std::endl;
+  std::cout << p.x<<std::endl;
 }
