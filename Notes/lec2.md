@@ -82,3 +82,41 @@ every method in a class contains a parameter *this* == &instance, same as the se
 Methods can be written in the class
 - Done for brevity
 - You should put ur function implementation in a seperate file.
+	interface: type, definition, signiture of functions
+	implementation: full definition for every entity
+	Why??
+	- organize code and manage dependencies
+	- multiple source files sharing the same code (code reuse)
+	- people can work on seperate files
+	- changes in a component may not require recompilie of other components
+
+Declaration: asserting exisence
+Definition: full details, allocate space
+
+In C
+a.h: header file - interface (declaration)
+a.c: implementation (definition)
+#include "a.h"
+- copy content of the source file
+- all entities are included
+- header guards are required to avoid repeating definition(compiler will complain)
+// inside a.h
+#ifndef A (if not define A)
+#define A
+
+struct A{...}
+...
+#endif
+
+In C++
+- declare dependency without copying file content
+- compiler processes dependencies faster
+- non-exported entities are invisible outside of module
+- no need to manage redefinition
+
+
+g++ -c ...cc 
+- compile only
+- do not build exec.
+- generates object files (.o), these are machine code 
+point -> point-inpl -> main
