@@ -1,6 +1,6 @@
-#include <iostream>
-#include <string>
-#include <sstream>
+import <iostream>;
+import <string>;
+import <sstream>;
 
 int main(){
   std::string f, f_line, f_word, f_big, f_small;
@@ -23,7 +23,7 @@ int main(){
         f_small = f_line;
         smallest = count;
       }
-      std::cout << smallest << std::endl;
+      // std::cout << smallest << std::endl;
     }
     std::cout << f_small << std::endl << f_big << std::endl;
     return 0;
