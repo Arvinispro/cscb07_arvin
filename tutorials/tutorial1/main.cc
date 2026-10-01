@@ -9,7 +9,7 @@ int main(){
     while(! std::cin.eof()){
       count = 0;
       std::getline(std::cin, f_line);
-      std::ifstream f{"f_line"};
+      std::istringstream f{f_line};
       while(f >> f_word){
         count++;
       }
@@ -21,6 +21,7 @@ int main(){
         f_small = f_line;
         smallest = count;
       }
+      std::del f;
     }
     return 0;
 
