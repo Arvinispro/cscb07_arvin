@@ -21,7 +21,6 @@ int main(){
         f_small = f_line;
         smallest = count;
       }
-      std::del f;
     }
     return 0;
 
