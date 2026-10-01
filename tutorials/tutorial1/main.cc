@@ -25,7 +25,7 @@ int main(){
       }
       std::cout << smallest << std::endl;
     }
-    std::cout << f_big << std::endl << f_small << std::endl;
+    std::cout << f_small << std::endl << f_big << std::endl;
     return 0;
 
 }
