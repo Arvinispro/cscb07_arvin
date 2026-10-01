@@ -22,6 +22,7 @@ int main(){
         smallest = count;
       }
     }
+    std::cout << f_big << std::endl << f_small << std::endl;
     return 0;
 
 }
