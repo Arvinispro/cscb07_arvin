@@ -5,11 +5,13 @@
 int main(){
   std::string f, f_line, f_word, f_big, f_small;
   int biggest=-1, smallest=2147483647, count;
+  bool check=true;
   // for each line
-    while(! std::cin.eof()){
+    while(check){
       count = 0;
       std::getline(std::cin, f_line);
       std::istringstream f{f_line};
+      if(f.eof()) check=false;
       while(f >> f_word){
         count++;
       }
