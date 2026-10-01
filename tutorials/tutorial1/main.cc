@@ -23,6 +23,7 @@ int main(){
         f_small = f_line;
         smallest = count;
       }
+      std::cout << smallest << std::endl;
     }
     std::cout << f_big << std::endl << f_small << std::endl;
     return 0;
