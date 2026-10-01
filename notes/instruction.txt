@@ -3,6 +3,7 @@ Write code in local -> Push it to github(cscb07_arvin)
 In mathlab, git pull -> run "g++20h iostream" to apply the functions -> g++20 <filename>.cc 
 A0: https://cdn-uploads.piazza.com/paste/mp2zcrg0cja1kz/96fe3c623db0b521219874477403c8a1d37f4de1fbfaa4a6511ecf1c5db1d196/a0.pdf
 Markus:  https://markus.utsc.utoronto.ca/ 
+
 Submit assignments
 cd cscb07/submissions/yangy607
 (If any new assignments came) git pull
