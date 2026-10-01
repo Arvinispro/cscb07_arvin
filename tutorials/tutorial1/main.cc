@@ -11,9 +11,9 @@ int main(){
       count = 0;
       std::getline(std::cin, f_line);
       std::istringstream f{f_line};
-      if(f.eof()) check=false;
       while(f >> f_word){
         count++;
+        if(f.eof()) check=false;
       }
       if(count > biggest){
         f_big = f_line;
