@@ -11,10 +11,12 @@ int main(){
       count = 0;
       std::getline(std::cin, f_line);
       std::istringstream f{f_line};
+      std::cout << f_line << std::endl;
       while(f >> f_word){
         count++;
         if(f.eof()) check=false;
       }
+      std::cout << count << std::endl;
       if(count > biggest){
         f_big = f_line;
         biggest = count;
@@ -24,7 +26,7 @@ int main(){
         smallest = count;
       }
     }
-    std::cout << f_big << std::endl << f_small << std::endl;
+    // std::cout << f_big << std::endl << f_small << std::endl;
     return 0;
 
 }
