@@ -1,0 +1,23 @@
+create a 1/2
+create b 1/3
++ a b
+create c -1/5
++ a c
++ c a
+create d -1/6
++ c d
++ a a
++ b b
++      a     
+ 
+
+  b    
+
+
+create c 4/1
+
+
++ c a
+create d 2/2
++ c d
++ d c
