@@ -21,3 +21,6 @@ create c 4/1
 create d 2/2
 - c d
 - a d
+create a 4/15
+create b 1/15
+- a b
