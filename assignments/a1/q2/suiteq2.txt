@@ -1,0 +1,51 @@
+1. Add empty into length 1 IntArray
+add_1_empty_more.in
+add_1_empty_more.out
+2. Add length 1 int into length 2 IntArray
+add_2_plus_1.in
+add_2_plus_1.out
+3. Add length 4 int into length 3 IntArray
+add_3_plus_4.in
+add_3_plus_4.out
+4. Add length 17 int into length 4 IntArray
+add_4_plus_17.in
+add_4_plus_17.out
+5. Add 1 int into empty IntArray, with trailing space and leading space.
+add_empty_1_trailing_leading.in
+add_empty_1_trailing_leading.out
+6. Add 5 int into empty IntArray
+add_empty_5_int.in
+add_empty_5_int.out
+7. Add 18 int into empty IntArray
+add_empty_18_int.in
+add_empty_18_int.out
+8. Add empty into empty IntArray
+add_empty.in
+add_empty.out
+9. Read 1 int, with trailing and leading space.
+read_1_int_trailing_leading.in
+read_1_int_trailing_leading.out
+10. Read 5 int
+read_5_int.in
+read_5_int.out
+11. Read 30, 40 int
+read_30_40_int.in
+read_30_40_int.out
+11.1 Read 79 int
+read_79_int.in
+read_79_int.out
+12. Read with a char in front
+read_char_front.in
+read_char_front.out
+13. Read with a char in the middle.
+read_char_middle.in
+read_char_middle.out
+14. Read empty set
+read_empty.in
+read_empty.out
+15. Read with a string in the middle.
+read_str_middle.in
+read_str_middle.out
+16. Read empty that has contained something (Test if program can erase)
+read_to_empty.in
+read_to_empty.out
