@@ -20,4 +20,4 @@ create c 4/1
 + c a
 create d 2/2
 + c d
-+ d c
++ d a
