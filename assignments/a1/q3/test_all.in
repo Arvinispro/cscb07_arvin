@@ -19,6 +19,8 @@ create d 6/2
 print d
 create a -4/4
 print a
+create a 1392/1232
+print a
 create a 1/2
 create b 1/3
 / a b
@@ -135,3 +137,75 @@ create b 3/20
 create a 299/1902
 create b 4813/381
 + a b
+create a 1/2
+create b 1/3
+-= a b
+-= b a
+create c -1/5
+-= a c
+-= c a
+create d -1/6
+-= c d
+-= a a
+-=      a     
+ 
+
+  b    
+
+
+create c 4/1
+
+
+-= c a
+create d 2/2
+-= c d
+-= a d
+create a 4/15
+create b 1/15
+-= a b
+create a 299/1902
+create b 4813/381
+-= a b
+create a 1/2
+create b 1/3
++= a b
+create c -1/5
++= a c
++= c a
+create d -1/6
++= c d
++= a a
++= b b
++=      a     
+ 
+
+  b    
+
+
+create c 4/1
+
+
++= c a
+create d 2/2
++= c d
++= a d
+create a 7/20
+create b 3/20
++= a b
+create a 299/1902
+create b 4813/381
++= a b
+create a 1/2
+u- a
+create b -1/3
+u- b
+u-    a
+
+
+   
+create c 3
+u- c
+create d -19
+u- d
+create a 1392/1232
+u- a

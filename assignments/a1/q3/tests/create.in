@@ -19,3 +19,5 @@ create d 6/2
 print d
 create a -4/4
 print a
+create a 1392/1232
+print a
