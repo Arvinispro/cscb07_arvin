@@ -2,10 +2,7 @@ create a 1/2
 u- a
 create b -1/3
 u- b
-u-    a
-
-
-   
+u- a
 create c 3
 u- c
 create d -19
