@@ -1,4 +1,0 @@
-read_empty.in
-read_1_int.in
-read_to_empty.in
-read_5_int.in
