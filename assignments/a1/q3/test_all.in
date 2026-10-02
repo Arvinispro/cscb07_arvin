@@ -203,9 +203,9 @@ u-    a
 
 
    
-create c 3
+create c 3/1
 u- c
-create d -19
+create d -19/1
 u- d
 create a 1392/1232
 u- a
