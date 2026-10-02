@@ -15,3 +15,7 @@ create b 3/-7
 print b
 create c -9/-10
 print c
+create d 6/2
+print d
+create a -4/4
+print a
