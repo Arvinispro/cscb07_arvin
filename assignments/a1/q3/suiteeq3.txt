@@ -1,0 +1,25 @@
+The tests include: Normal input, negative inputs, 0, leading and tailing spacing, multiple digits inputs, factorization testing 
+create: Test create functions
+create.in
+create.out
+divide: Test divide functions
+divide.in
+divide.out
+minus_equals: Test minus_equals functions
+minus_equals.in
+minus_equals.out
+minus: Test minus functions
+minus.in
+minus.out
+multiply: Test multiply functions
+multiply.in
+multiply.out
+plus_equal: Test plus_equal functions
+plus_equal.in
+plus_equal.out
+plus: Test plus functions
+plus.in
+plus.out
+u_minus: Test u_minus functions
+u_minus.in
+u_minus.out
