@@ -24,3 +24,17 @@ test3_3.out
 test3_3.args
 test3_3.txt
 test4: Test when the program is invoked incorrectly, expecting 'usage: wordguess [filename]'
+test4.in
+test4.out
+test4.args
+test4.txt
+test5: Test with 'speEd'
+test5.in
+test5.out
+test5.args
+test5.txt
+test6: Test when the the guess failed
+test6.in
+test6.out
+test6.args
+test6.txt
