@@ -1,4 +1,4 @@
-test1: Test the placement, caps, leading and trailing, validness of input, and ending with a successful guess on 'aeiou'
+test1: Test the placement, caps, validness of input, all words guessed but wrong order, and ending with a successful guess on 'aeiou'
 test1.in
 test1.out
 test1.args
@@ -8,11 +8,19 @@ test2:in
 test2:out
 test2:args
 test3: Test when the secret words are invalid, repeated words or invalid length. Expecting “the secret word is invalid” in the message
+test3_1: repeated words
 test3_1.in
 test3_1.out
 test3_1.args
 test3_1.txt
+test3_2: too long
 test3_2.in
 test3_2.out
 test3_2.args
 test3_2.txt
+test3_3: too small
+test3_3.in
+test3_3.out
+test3_3.args
+test3_3.txt
+test4: Test when the program is invoked incorrectly, expecting 'usage: wordguess [filename]'
