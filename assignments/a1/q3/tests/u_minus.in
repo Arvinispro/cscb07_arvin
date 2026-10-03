@@ -12,3 +12,5 @@ create d -19/1
 u- d
 create a 1392/1232
 u- a
+create b 0/44
+u- b

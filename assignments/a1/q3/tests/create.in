@@ -21,3 +21,5 @@ create a -4/4
 print a
 create a 1392/1232
 print a
+create b 0/10
+print b

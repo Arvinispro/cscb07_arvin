@@ -27,3 +27,6 @@ create b 1/15
 create a 299/1902
 create b 4813/381
 - a b
+create c 0/7
+create d 0/1
+- c d

@@ -27,3 +27,6 @@ create b 3/20
 create a 299/1902
 create b 4813/381
 += a b
+create c 0/12
+create d 0/8
++= c d

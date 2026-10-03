@@ -27,3 +27,5 @@ create b 4/3
 create a 299/1902
 create b 48313/381
 / a b
+create a 0/2
+/ a b
