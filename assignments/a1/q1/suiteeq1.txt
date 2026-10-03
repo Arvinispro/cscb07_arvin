@@ -1,0 +1,5 @@
+test1: Test the placement, caps, leading and trailing, validness of input, and ending with a successful guess on 'aeiou'
+test1.in
+test1.out
+test1.args
+test1.txt
