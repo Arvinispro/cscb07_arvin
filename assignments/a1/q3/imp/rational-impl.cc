@@ -55,8 +55,8 @@ void Rational::simplify(){
 }
 
 Rational Rational::operator+(const Rational &rhs)const{ //start by learning this
-  int NUM = (this -> num * rhs.den) + (rhs.num * this -> den);
-  int DEN = (this -> den * rhs.den);
+  int NUM = (this -> getNumerator() * rhs.den) + (rhs.num * this -> getDenominator());
+  int DEN = (this -> getDenominator() * rhs.den);
   Rational rsl{NUM, DEN};
   // rsl.simplify();
   return rsl;
