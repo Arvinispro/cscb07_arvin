@@ -5,6 +5,10 @@ std::ostream &operator<<(std::ostream &out, const Rational &rat){
     out << rat.num;
     return out;
   }
+  if rat.isZero(){
+    out << 0;
+    return out;
+  }
   out << rat.num << '/' << rat.den;
   return out;
 }
@@ -17,11 +21,14 @@ std::istream &operator>>(std::istream &in, Rational &rat){
   return in;
 }
 Rational::Rational(int num, int den){
+
   if((num > 0 && den >0) || (num < 0 && den > 0)){
+    std::cout << "First" << std::endl;
     this -> num = num;
     this -> den = den;
   }
   else{
+    std::cout << "Second" << std::endl;
     this -> num = -1 * num;
     this -> den = -1 * den;
   }
