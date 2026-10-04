@@ -1,9 +1,5 @@
 module rational;
 import <iostream>;
-import <fstream>;
-import <sstream>;
-import <iomanip>;
-import <string>;
 
 void Rational::simplify(){
   int num = this -> num;
@@ -22,5 +18,4 @@ void Rational::simplify(){
   }
   this -> num = num;
   this -> dom = dom;
-  std::cout << num << ' ' << dom << std::endl;
 }
