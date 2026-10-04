@@ -13,22 +13,22 @@ std::ostream &operator<<(std::ostream &out, const Rational &rat){
   return out;
 }
 std::istream &operator>>(std::istream &in, Rational &rat){
-  in >> rat.num;
+  int NUM, DEN;
+  in >> NUM;
   char slash;
   in >> slash;
-  in >> rat.den;
-  rat.simplify();
+  in >> DEN;
+  Rational rsl(NUM, DEN);
+  rat = rsl;
   return in;
 }
 Rational::Rational(int num, int den){
 
   if((num > 0 && den >0) || (num < 0 && den > 0)){
-    std::cout << "First" << std::endl;
     this -> num = num;
     this -> den = den;
   }
   else{
-    std::cout << "Second" << std::endl;
     this -> num = -1 * num;
     this -> den = -1 * den;
   }
