@@ -1,9 +1,5 @@
 import rational;
 import <iostream>;
-import <fstream>;
-import <sstream>;
-import <iomanip>;
-import <string>;
 
 int main(){
   int a = 20;
