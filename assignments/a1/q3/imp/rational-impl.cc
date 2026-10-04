@@ -24,6 +24,7 @@ Rational::Rational(int num, int den){
     this -> num = -1 * num;
     this -> den = -1 * den;
   }
+  this -> simplify();
 }
 
 void Rational::simplify(){
@@ -49,28 +50,28 @@ Rational Rational::operator+(const Rational &rhs)const{ //start by learning this
   int NUM = (this -> num * rhs.den) + (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   Rational rsl{NUM, DEN};
-  rsl.simplify();
+  // rsl.simplify();
   return rsl;
 }
 Rational Rational::operator-(const Rational &rhs) const{
   int NUM = (this -> num * rhs.den) - (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   Rational rsl{NUM, DEN};
-  rsl.simplify();
+  // rsl.simplify();
   return rsl;
 }
 Rational Rational::operator*(const Rational &rhs) const{
   int NUM = this -> num * rhs.num;
   int DEN = this -> den * rhs.den;
   Rational rsl{NUM, DEN};
-  rsl.simplify();
+  // rsl.simplify();
   return rsl;
 }
 Rational Rational::operator/(const Rational &rhs) const{
   int NUM = this -> num * rhs.den;
   int DEN = this -> den * rhs.num;
   Rational rsl{NUM, DEN};
-  rsl.simplify();
+  // rsl.simplify();
   return rsl;
 }
 
@@ -79,7 +80,7 @@ Rational& Rational::operator+=(const Rational &rhs){
   int DEN = (this -> den * rhs.den);
   this -> num = NUM;
   this -> den = DEN;
-  this -> simplify();
+  // this -> simplify();
   return *this;
 }
 Rational &Rational::operator-=(const Rational &rhs){
@@ -87,7 +88,7 @@ Rational &Rational::operator-=(const Rational &rhs){
   int DEN = (this -> den * rhs.den);
   this -> num = NUM;
   this -> den = DEN;
-  this -> simplify();
+  // this -> simplify();
   return *this;
 }
 Rational Rational::operator-() const{
