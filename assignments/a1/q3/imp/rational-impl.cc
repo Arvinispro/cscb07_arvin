@@ -79,20 +79,20 @@ Rational& Rational::operator+=(const Rational &rhs){
   int DEN = (this -> den * rhs.den);
   this -> num = NUM;
   this -> den = DEN;
-  this.simplify();
-  return &this;
+  this -> simplify();
+  return this;
 }
 Rational &Rational::operator-=(const Rational &rhs){
   int NUM = (this -> num * rhs.den) - (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   this -> num = NUM;
   this -> den = DEN;
-  this.simplify();
-  return &this;
+  this -> simplify();
+  return this;
 }
 Rational Rational::operator-() const{
   int NUM = -1 * this -> num;
-  int DEN = this -> DEN;
+  int DEN = this -> den;
   Rational rsl(NUM, DEN);
   return rsl;
 }
