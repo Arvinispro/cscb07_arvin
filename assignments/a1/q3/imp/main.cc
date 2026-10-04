@@ -2,10 +2,7 @@ import rational;
 import <iostream>;
 
 int main(){
-  int a = 2994;
-  int b = 1902;
-  int c = 293;
-  int d = 1291;
+  Rational r1, r2;
   std::cin >> r1;
   std::cin >> r2;
   Rational r = r1 + r2;
