@@ -16,8 +16,18 @@ std::istream &operator>>(std::istream &in, Rational &rat){
   return in;
 }
 Rational::Rational(int num, int den){
-  this -> num = num;
-  this -> den = den;
+  if(num > 0 && den >0){
+    this -> num = num;
+    this -> den = den;
+  }
+  else if (num < 0 && den < 0){
+    this -> num = -1 * num;
+    this -> den = -1 * den;
+  }
+  else{
+    this -> num = -1 * std::abs(num);
+    this -> den = std::abs(den);
+  }
 }
 
 void Rational::simplify(){
@@ -38,10 +48,63 @@ void Rational::simplify(){
   this -> num = num;
   this -> den = den;
 }
+
 Rational Rational::operator+(const Rational &rhs)const{ //start by learning this
   int NUM = (this -> num * rhs.den) + (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   Rational rsl{NUM, DEN};
   rsl.simplify();
   return rsl;
+}
+Rational Rational::operator-(const Rational &rhs) const{
+  int NUM = (this -> num * rhs.den) - (rhs.num * this -> den);
+  int DEN = (this -> den * rhs.den);
+  Rational rsl{NUM, DEN};
+  rsl.simplify();
+  return rsl;
+}
+Rational Rational::operator*(const Rational &rhs) const{
+  int NUM = this -> num * rhs.num;
+  int DEN = this -> den * rhs.den;
+  Rational rsl{NUM, DEN};
+  rsl.simplify();
+  return rsl;
+}
+Rational Rational::operator/(const Rational &rhs) const{
+  int NUM = this -> num * rhs.den;
+  int DEN = this -> den * rhs.num;
+  Rational rsl{NUM, DEN};
+  rsl.simplify();
+  return rsl;
+}
+
+Rational Rational::&operator+=(const Rational &rhs){
+  int NUM = (this -> num * rhs.den) + (rhs.num * this -> den);
+  int DEN = (this -> den * rhs.den);
+  this -> num = NUM;
+  this -> den = DEN;
+  this.simplify();
+  return this;
+}
+Rational Rational::&operator-=(const Rational &rhs){
+  int NUM = (this -> num * rhs.den) - (rhs.num * this -> den);
+  int DEN = (this -> den * rhs.den);
+  this -> num = NUM;
+  this -> den = DEN;
+  this.simplify();
+  return this;
+}
+Rational Rational::operator-() const{
+  this -> num = -1 * this -> num;
+  return this;
+}
+
+int Rational::getNumerator() const{
+  return this -> num;
+}
+int Rational::getDenominator() const{
+  return this -> den
+}
+bool Rational::isZero() const{
+  return this -> num == 0;
 }
