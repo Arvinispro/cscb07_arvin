@@ -2,8 +2,8 @@ import rational;
 import <iostream>;
 
 int main(){
-  int a = 20;
-  int b = 50;
+  int a = 48313;
+  int b = 381;
   Rational r{a, b};
   std::cout << r.num << ' ' << r.den << std::endl;
   r.simplify();
