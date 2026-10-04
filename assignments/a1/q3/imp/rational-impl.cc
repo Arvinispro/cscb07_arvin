@@ -45,36 +45,36 @@ void Rational::simplify(){
   this -> den = den;
 }
 
-Rational& Rational::operator+(const Rational &rhs)const{ //start by learning this
+Rational Rational::operator+(const Rational &rhs)const{ //start by learning this
   int NUM = (this -> num * rhs.den) + (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   Rational rsl{NUM, DEN};
   rsl.simplify();
-  return &rsl;
+  return rsl;
 }
-Rational &Rational::operator-(const Rational &rhs) const{
+Rational Rational::operator-(const Rational &rhs) const{
   int NUM = (this -> num * rhs.den) - (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   Rational rsl{NUM, DEN};
   rsl.simplify();
-  return &rsl;
+  return rsl;
 }
-Rational& Rational::operator*(const Rational &rhs) const{
+Rational Rational::operator*(const Rational &rhs) const{
   int NUM = this -> num * rhs.num;
   int DEN = this -> den * rhs.den;
   Rational rsl{NUM, DEN};
   rsl.simplify();
-  return &rsl;
+  return rsl;
 }
-Rational& Rational::operator/(const Rational &rhs) const{
+Rational Rational::operator/(const Rational &rhs) const{
   int NUM = this -> num * rhs.den;
   int DEN = this -> den * rhs.num;
   Rational rsl{NUM, DEN};
   rsl.simplify();
-  return &rsl;
+  return rsl;
 }
 
-Rational& Rational::&operator+=(const Rational &rhs){
+Rational& Rational::operator+=(const Rational &rhs){
   int NUM = (this -> num * rhs.den) + (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   this -> num = NUM;
@@ -82,7 +82,7 @@ Rational& Rational::&operator+=(const Rational &rhs){
   this.simplify();
   return &this;
 }
-Rational& Rational::&operator-=(const Rational &rhs){
+Rational &Rational::operator-=(const Rational &rhs){
   int NUM = (this -> num * rhs.den) - (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   this -> num = NUM;
@@ -90,11 +90,11 @@ Rational& Rational::&operator-=(const Rational &rhs){
   this.simplify();
   return &this;
 }
-Rational& Rational::operator-() const{
+Rational Rational::operator-() const{
   int NUM = -1 * this -> num;
   int DEN = this -> DEN;
   Rational rsl(NUM, DEN);
-  return &rsl;
+  return rsl;
 }
 
 int Rational::getNumerator() const{
