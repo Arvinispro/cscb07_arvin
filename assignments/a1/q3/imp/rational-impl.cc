@@ -1,6 +1,10 @@
 module rational;
 import <iostream>;
 
+Rational::Rational(int num, int den){
+  this -> num = num;
+  this -> den = den;
+}
 void Rational::simplify(){
   int num = this -> num;
   int den = this -> den;
