@@ -13,6 +13,7 @@ std::istream &operator>>(std::istream &in, Rational &rat){
   char slash;
   in >> slash;
   in >> rat.den;
+  rat.simplify();
   return in;
 }
 Rational::Rational(int num, int den){
