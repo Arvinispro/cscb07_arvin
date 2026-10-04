@@ -1,11 +1,11 @@
 module rational;
 import <iostream>;
-std::ostream &operator<<(std::ostream &out, const Rational &rat){
+// std::ostream &operator<<(std::ostream &out, const Rational &rat){
 
-}
-std::istream &operator>>(std::istream &in, Rational &rat);{
+// }
+// std::istream &operator>>(std::istream &in, Rational &rat);{
 
-}
+// }
 Rational::Rational(int num, int den){
   this -> num = num;
   this -> den = den;
