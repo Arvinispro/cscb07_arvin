@@ -1,11 +1,20 @@
 module rational;
 import <iostream>;
-// std::ostream &operator<<(std::ostream &out, const Rational &rat){
-
-// }
-// std::istream &operator>>(std::istream &in, Rational &rat);{
-
-// }
+std::ostream &operator<<(std::ostream &out, const Rational &rat){
+  if (rat.den==1){
+    out << rat.num;
+    return out;
+  }
+  out << rat.num << '/' << rat.den;
+  return out;
+}
+std::istream &operator>>(std::istream &in, Rational &rat){
+  in >> rat.num;
+  char slash;
+  in >> slash;
+  in >> rat.den;
+  return in;
+}
 Rational::Rational(int num, int den){
   this -> num = num;
   this -> den = den;
@@ -29,7 +38,7 @@ void Rational::simplify(){
   this -> num = num;
   this -> den = den;
 }
-Rational Rational::operator+(const Rational &rhs)const{
+Rational Rational::operator+(const Rational &rhs)const{ //start by learning this
   int NUM = (this -> num * rhs.den) + (rhs.num * this -> den);
   int DEN = (this -> den * rhs.den);
   Rational rsl{NUM, DEN};
