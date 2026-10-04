@@ -5,7 +5,7 @@ std::ostream &operator<<(std::ostream &out, const Rational &rat){
     out << rat.num;
     return out;
   }
-  if rat.isZero(){
+  if (rat.isZero()){
     out << 0;
     return out;
   }
