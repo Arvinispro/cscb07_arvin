@@ -2,10 +2,10 @@ import <iostream>;
 import <sstream>;
 
 bool validate(std::string word){
-  int count{0}
+  int count{0};
   std::string seen;
   for(char c:word){
-    if (count > 5) return false
+    if (count > 5) return false;
     for (char s:seen){
       if (s == c) return false;
     }
@@ -24,18 +24,18 @@ int main(int argc, char* argv[]){
   else if(argc == 2){
     arg = 1;
   } 
-  else std::cer << "“usage: wordguess " << argv[0] << std::endl;
+  else std::cerr << "“usage: wordguess " << argv[0] << std::endl;
 
   //open file 
   if(std::ifstream f{argv[arg]}){
-    std::string secret;
+    const std::string secret;
     f >> secret;
   }
   else{
-    std::cer << argv[arg] << " cannot be opened" << std::endl;
+    std::cerr << argv[arg] << " cannot be opened" << std::endl;
   }
   //validate secret word
-  if !(validate(secret)) std::cer << "the secret word is invalid" << std::endl;
+  if (!validate(secret)) std::cerr << "the secret word is invalid" << std::endl;
   
   //guess
   std::string input;
@@ -45,7 +45,7 @@ int main(int argc, char* argv[]){
     std::cin >> input;
 
     //validate input
-    if !(validate(input)){
+    if (!validate(input)){
       std::cout << "invalid guess" << std::endl;
       continue;
     } 
