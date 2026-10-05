@@ -30,9 +30,10 @@ IntArray readIntArray(){
       rsl.size++;
     }
   }
-  // cin.ignore();
-  char p = cin.peek();
-  cout << "peek" << p << endl;
+  cin.ignore();
+  cin.clear();
+  // char p = cin.peek();
+  // cout << "peek" << p << endl;
   return rsl;
 }
 
@@ -56,6 +57,7 @@ void addToIntArray(IntArray& ia){
     }
   }
   cin.ignore();
+  cin.clear();
 }
 
 void printIntArray(const IntArray& ia){
