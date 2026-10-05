@@ -64,7 +64,6 @@ void printIntArray(const IntArray& ia){
   for(int i=0; i < ia.size; i++){
     cout << ia.contents[i] << ' ';
   }
-  cout << "\n" << endl;
 }
 
 
