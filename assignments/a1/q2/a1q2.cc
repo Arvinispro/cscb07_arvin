@@ -31,6 +31,8 @@ IntArray readIntArray(){
     }
   }
   cin.ignore();
+  char p = cin.peek();
+  cout << p << endl;
   return rsl;
 }
 
