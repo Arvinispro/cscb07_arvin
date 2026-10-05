@@ -12,6 +12,7 @@ IntArray readIntArray(){
   IntArray rsl;
   rsl.size = 0;
   rsl.capacity = 0;
+  rsl.contents = nullptr;
   int a;
   while(cin >> a){
     if(rsl.size < rsl.capacity){
