@@ -20,14 +20,14 @@ bool validate(std::string word){
 
 int main(int argc, char* argv[]){
   int arg;
-  if (argc == 1){
-    arg = 0;
-  }
-  else if(argc == 2){
+  if (argc == 2){
     arg = 1;
+  }
+  else if(argc == 3){
+    arg = 2;
   } 
   else {
-    std::cerr << "“usage: wordguess " << argv[0] << std::endl;
+    std::cerr << "“usage: wordguess " << argv[arg] << std::endl;
   }
   //open file 
   std::ifstream f{argv[arg]};
