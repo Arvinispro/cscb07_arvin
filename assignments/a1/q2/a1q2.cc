@@ -30,7 +30,7 @@ IntArray readIntArray(){
       rsl.size++;
     }
   }
-  cin.ignnore();
+  cin.ignore();
   return rsl;
 }
 
@@ -53,7 +53,7 @@ void addToIntArray(IntArray& ia){
       ia.size++;
     }
   }
-  cin.ignnore();
+  cin.ignore();
 }
 
 void printIntArray(const IntArray& ia){
