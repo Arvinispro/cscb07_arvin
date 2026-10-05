@@ -30,8 +30,8 @@ int main(int argc, char* argv[]){
 
   //open file 
   std::ifstream f{argv[arg]};
+  std::string read;
   if(f.is_open()){
-    std::string read;
     f >> read;
   }
   else{
