@@ -21,7 +21,7 @@ IntArray readIntArray(){
     else{
       if(rsl.capacity==0) rsl.capacity = 5; else rsl.capacity = rsl.capacity * 2;
 
-      new_contents = new int[rsl.capacity];
+      int *new_contents = new int[rsl.capacity];
       for(int i=0; i<rsl.size; i++){
         new_contents[i] = rsl.contents[i];
       }
@@ -43,7 +43,7 @@ void addToIntArray(IntArray& ia){
     else{
       if(ia.capacity==0) ia.capacity = 5; else ia.capacity = ia.capacity * 2;
 
-      new_contents = new int[ia.capacity];
+      int *new_contents = new int[ia.capacity];
       for(int i=0; i<ia.size; i++){
         new_contents[i] = ia.contents[i];
       }
@@ -56,7 +56,7 @@ void addToIntArray(IntArray& ia){
 
 void printIntArray(const IntArray& ia){
   for(int i=0; i < ia.size; i++){
-    cout << ia.contents[i]; << ' ';
+    cout << ia.contents[i] << ' ';
   }
   cout << "\n" << "Capacity: " << ia.capacity << endl;
 }
