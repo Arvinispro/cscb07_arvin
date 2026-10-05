@@ -29,10 +29,13 @@ IntArray readIntArray(){
       rsl.contents[rsl.size] = a;
       rsl.size++;
     }
+    for(int i=0; i < rsl.size; i++){
+      cout << rsl.contents[i] << ' ';
+    }
   }
   cin.ignore();
-  char p = cin.peek();
-  cout << "peek" << p << endl;
+  // char p = cin.peek();
+  // cout << "peek" << p << endl;
   return rsl;
 }
 
