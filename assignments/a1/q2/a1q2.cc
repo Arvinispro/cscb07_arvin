@@ -8,11 +8,58 @@ struct IntArray {
   int *contents; //the integer array
 };
 
-IntArray readIntArray();
+IntArray readIntArray(){
+  IntArray rsl;
+  rsl.size = 0;
+  rsl.capacity = 0;
+  int a;
+  while(cin >> a){
+    if(rsl.size < rsl.capacity){
+      rsl.contents[rsl.size] = a;
+      rsl.size++;
+    }
+    else{
+      if(rsl.capacity==0) rsl.capacity = 5; else rsl.capacity = rsl.capacity * 2;
 
-void addToIntArray(IntArray& ia);
+      new_contents = new int[rsl.capacity];
+      for(int i=0; i<rsl.size; i++){
+        new_contents[i] = rsl.contents[i];
+      }
+      rsl.contents = new_contents;
+      rsl.contents[rsl.size] = a;
+      rsl.size++;
+    }
+  }
+  return rsl;
+}
 
-void printIntArray(const IntArray& ia);
+void addToIntArray(IntArray& ia){
+  int a;
+  while(cin >> a){
+    if(ia.size < ia.capacity){
+      ia.contents[ia.size+1] = a;
+      ia.size++;
+    }
+    else{
+      if(ia.capacity==0) ia.capacity = 5; else ia.capacity = ia.capacity * 2;
+
+      new_contents = new int[ia.capacity];
+      for(int i=0; i<ia.size; i++){
+        new_contents[i] = ia.contents[i];
+      }
+      ia.contents = new_contents;
+      ia.contents[ia.size] = a;
+      ia.size++;
+    }
+  }
+}
+
+void printIntArray(const IntArray& ia){
+  for(int i=0; i < ia.size; i++){
+    cout << ia.contents[i]; << ' ';
+  }
+  cout << "\n" << "Capacity: " << ia.capacity << endl;
+}
 
 
 // Do not change this function!
