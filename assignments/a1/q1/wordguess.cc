@@ -27,7 +27,8 @@ int main(int argc, char* argv[]){
     arg = 2;
   } 
   else {
-    std::cerr << "“usage: wordguess [filename]" << std::endl;
+    std::cerr << "“usage: wordguess <filename>" << std::endl;
+    return 1;
   }
   //open file 
   std::ifstream f{argv[arg]};
@@ -37,9 +38,14 @@ int main(int argc, char* argv[]){
   }
   else{
     std::cerr << argv[arg] << " cannot be opened" << std::endl;
+    return 1;
   }
   //validate secret word
-  if (!validate(read)) std::cerr << "the secret word is invalid" << std::endl;
+  if (!validate(read)){
+    std::cerr << "the secret word is invalid" << std::endl;
+    return 1;
+  } 
+
   
   const std::string secret = read;
   //guess
@@ -73,4 +79,5 @@ int main(int argc, char* argv[]){
       std::cout << match << " letters match" << std::endl;
     }
   }
+  return 0;
 }
