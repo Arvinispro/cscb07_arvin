@@ -28,7 +28,7 @@ int main(int argc, char* argv[]){
   else std::cerr << "“usage: wordguess " << argv[0] << std::endl;
 
   //open file 
-  std::ifstream f{argv[arg]}
+  std::ifstream f{argv[arg]};
   if(f.is_open()){
     const std::string secret;
     f >> secret;
