@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
     arg = 2;
   } 
   else {
-    std::cerr << "“usage: wordguess " << argv[1] << std::endl;
+    std::cerr << "“usage: wordguess [filename]" << std::endl;
   }
   //open file 
   std::ifstream f{argv[arg]};
