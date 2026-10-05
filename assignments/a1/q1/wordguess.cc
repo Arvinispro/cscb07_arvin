@@ -1,5 +1,6 @@
 import <iostream>;
 import <sstream>;
+import <string>;
 
 bool validate(std::string word){
   int count{0};
@@ -9,7 +10,7 @@ bool validate(std::string word){
     for (char s:seen){
       if (s == c) return false;
     }
-    c >> seen;
+    seen += c;
     count ++;
   }
   if (count < 5) return false;
@@ -27,7 +28,8 @@ int main(int argc, char* argv[]){
   else std::cerr << "“usage: wordguess " << argv[0] << std::endl;
 
   //open file 
-  if(std::ifstream f{argv[arg]}){
+  std::ifstream f{argv[arg]}
+  if(f.is_open()){
     const std::string secret;
     f >> secret;
   }
