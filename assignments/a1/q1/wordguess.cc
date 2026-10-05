@@ -19,25 +19,18 @@ bool validate(std::string word){
 }
 
 int main(int argc, char* argv[]){
-  int arg;
-  if (argc == 2){
-    arg = 1;
-  }
-  else if(argc == 3){
-    arg = 2;
-  } 
-  else {
-    std::cerr << "“usage: wordguess <filename>" << std::endl;
+  if (argc != 2) {
+    std::cerr << "usage: wordguess <filename>" << std::endl;
     return 1;
   }
   //open file 
-  std::ifstream f{argv[arg]};
+  std::ifstream f{argv[1]};
   std::string read;
   if(f.is_open()){
     f >> read;
   }
   else{
-    std::cerr << argv[arg] << " cannot be opened" << std::endl;
+    std::cerr << argv[1] << " cannot be opened" << std::endl;
     return 1;
   }
   //validate secret word
