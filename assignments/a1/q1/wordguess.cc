@@ -1,6 +1,7 @@
 import <iostream>;
 import <fstream>;
 import <string>;
+import <sstream>;
 
 bool validate(std::string word){
   int count{0};
