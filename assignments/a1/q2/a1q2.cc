@@ -32,7 +32,7 @@ IntArray readIntArray(){
   }
   cin.ignore();
   char p = cin.peek();
-  cout << p << endl;
+  cout << "peek" << p << endl;
   return rsl;
 }
 
