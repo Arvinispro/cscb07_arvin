@@ -1,5 +1,5 @@
 import <iostream>;
-import <sstream>;
+import <fstream>;
 import <string>;
 
 bool validate(std::string word){
