@@ -15,7 +15,7 @@ IntArray readIntArray(){
   rsl.contents = nullptr;
   int a;
   while(cin >> a){
-    if(rsl.size < rsl.capacity){
+    if(rsl.size < rsl.capacity-1){
       rsl.contents[rsl.size] = a;
       rsl.size++;
     }
@@ -41,7 +41,7 @@ IntArray readIntArray(){
 void addToIntArray(IntArray& ia){
   int a;
   while(cin >> a){
-    if(ia.size < ia.capacity){
+    if(ia.size < ia.capacity-1){
       ia.contents[ia.size+1] = a;
       ia.size++;
     }
