@@ -31,15 +31,16 @@ int main(int argc, char* argv[]){
   //open file 
   std::ifstream f{argv[arg]};
   if(f.is_open()){
-    const std::string secret;
-    f >> secret;
+    std::string read;
+    f >> read;
   }
   else{
     std::cerr << argv[arg] << " cannot be opened" << std::endl;
   }
   //validate secret word
-  if (!validate(secret)) std::cerr << "the secret word is invalid" << std::endl;
+  if (!validate(read)) std::cerr << "the secret word is invalid" << std::endl;
   
+  const std::string secret = read;
   //guess
   std::string input;
   while(true){
