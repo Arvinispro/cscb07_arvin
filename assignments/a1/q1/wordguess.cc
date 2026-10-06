@@ -3,8 +3,8 @@ import <fstream>;
 import <string>;
 import <sstream>;
 
-bool validate(std::string word){
-  int count{0};
+bool validate(const std::string &word){
+  int count{1};
   std::string seen="";
   for(char c:word){
     std::cout << count << std::endl;
