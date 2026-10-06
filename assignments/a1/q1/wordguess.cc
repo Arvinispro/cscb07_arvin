@@ -7,7 +7,6 @@ bool validate(const std::string &word){
   int count{1};
   std::string seen="";
   for(char c:word){
-    std::cout << count << std::endl;
     if (count > 5) return false;
     for (char s:seen){
       if (s == c) return false;
@@ -67,6 +66,7 @@ int main(int argc, char* argv[]){
           if(c==secret[i] && check[i]==0){
             check[i] = 1;
           }
+          std::cout << check << std::endl;
         }
       }
       int match;
