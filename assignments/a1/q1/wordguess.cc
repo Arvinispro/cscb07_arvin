@@ -64,14 +64,12 @@ int main(int argc, char* argv[]){
       for(char c:input){
         // std::cout << c << std::endl;
         for(int i=0; i<5; i++){
-          std::cout << secret[i] << std::endl;
           if(c==secret[i] && check[i]==0){
             check[i] = 1;
           }
-          // std::cout << check << std::endl;
         }
       }
-      int match;
+      int match=0;
       for(int i=0; i<5; i++) match += check[i];
       std::cout << match << " letters match" << std::endl;
     }
