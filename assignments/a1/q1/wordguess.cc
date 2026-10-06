@@ -46,7 +46,7 @@ int main(int argc, char* argv[]){
   std::string input;
   while(true){
     input = "";
-    if(std::cin.eof()) break;
+    if(std::cin.eof()) return 1;
     std::cin >> input;
 
     //validate input
