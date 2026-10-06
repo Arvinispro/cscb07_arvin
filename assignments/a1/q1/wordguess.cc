@@ -62,11 +62,12 @@ int main(int argc, char* argv[]){
     else{
       int check[5]{0};
       for(char c:input){
+        std::cout << c << std::endl;
         for(int i; i<5; i++){
           if(c==secret[i] && check[i]==0){
             check[i] = 1;
           }
-          std::cout << check << std::endl;
+          // std::cout << check << std::endl;
         }
       }
       int match;
