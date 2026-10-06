@@ -4,11 +4,10 @@ import <string>;
 import <sstream>;
 
 bool validate(std::string word){
-  std::cout << word << std::endl;
   int count{0};
   std::string seen="";
   for(char c:word){
-
+    std::cout << count << std::endl;
     if (count > 5) return false;
     for (char s:seen){
       if (s == c) return false;
