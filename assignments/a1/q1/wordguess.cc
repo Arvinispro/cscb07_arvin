@@ -3,9 +3,9 @@ import <fstream>;
 import <string>;
 import <sstream>;
 
-bool validate(std::string word){
+bool validate(const std::string &word){
   int count{0};
-  std::string seen;
+  std::string seen="";
   for(char c:word){
 
     if (count > 5) return false;
