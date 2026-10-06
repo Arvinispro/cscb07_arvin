@@ -6,11 +6,8 @@ import <sstream>;
 bool validate(const std::string &word){
   int count{1};
   std::string seen="";
-  int check;
   for(char c:word){
     if(!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))) return false;
-    if(c >> check) return false;
-
     if (count > 5) return false;
     for (char s:seen){
       if (s == c) return false;
