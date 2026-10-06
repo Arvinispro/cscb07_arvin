@@ -26,6 +26,7 @@ IntArray readIntArray(){
       for(int i=0; i<rsl.size; i++){
         new_contents[i] = rsl.contents[i];
       }
+      delete [] rsl.contents;
       rsl.contents = new_contents;
       rsl.contents[rsl.size] = a;
       rsl.size++;
