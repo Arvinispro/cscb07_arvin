@@ -49,3 +49,6 @@ read_str_middle.out
 16. Read empty that has contained something (Test if program can erase)
 read_to_empty.in
 read_to_empty.out
+17. Start with add command
+add_first.in
+add_first.out

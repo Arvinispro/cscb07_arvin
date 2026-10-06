@@ -40,6 +40,10 @@ IntArray readIntArray(){
 }
 
 void addToIntArray(IntArray& ia){
+  if( ia.contents == nullptr){
+    ia.size = 0;
+    ia.capacity = 0;
+  }
   int a;
   while(cin >> a){
     if(ia.size < ia.capacity){
