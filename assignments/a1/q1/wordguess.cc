@@ -63,7 +63,7 @@ int main(int argc, char* argv[]){
       int check[5]{0};
       for(char c:input){
         // std::cout << c << std::endl;
-        for(int i; i<5; i++){
+        for(int i=0; i<5; i++){
           std::cout << secret[i] << std::endl;
           if(c==secret[i] && check[i]==0){
             check[i] = 1;
@@ -72,7 +72,7 @@ int main(int argc, char* argv[]){
         }
       }
       int match;
-      for(int i; i<5; i++) match += check[i];
+      for(int i=0; i<5; i++) match += check[i];
       std::cout << match << " letters match" << std::endl;
     }
   }
