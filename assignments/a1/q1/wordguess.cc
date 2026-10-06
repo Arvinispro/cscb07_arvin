@@ -62,8 +62,9 @@ int main(int argc, char* argv[]){
     else{
       int check[5]{0};
       for(char c:input){
-        std::cout << c << std::endl;
+        // std::cout << c << std::endl;
         for(int i; i<5; i++){
+          std::cout << secret[i] << std::endl;
           if(c==secret[i] && check[i]==0){
             check[i] = 1;
           }
