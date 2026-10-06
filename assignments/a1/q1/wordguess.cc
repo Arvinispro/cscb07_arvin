@@ -7,11 +7,13 @@ bool validate(std::string word){
   int count{0};
   std::string seen;
   for(char c:word){
+
     if (count > 5) return false;
     for (char s:seen){
       if (s == c) return false;
     }
     seen += c;
+    std::cout << "seen: " << seen << std::endl;
     count ++;
   }
   if (count < 5) return false;

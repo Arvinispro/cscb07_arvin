@@ -52,6 +52,7 @@ void addToIntArray(IntArray& ia){
       for(int i=0; i<ia.size; i++){
         new_contents[i] = ia.contents[i];
       }
+      delete [] ia.contents;
       ia.contents = new_contents;
       ia.contents[ia.size] = a;
       ia.size++;
