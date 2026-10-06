@@ -38,3 +38,8 @@ test6.in
 test6.out
 test6.args
 test6.txt
+test7: Test when the secret word contains number, expecting "secret word is invalud"
+test7.in
+test7.out
+test7.args
+test7.txt
