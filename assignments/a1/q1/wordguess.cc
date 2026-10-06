@@ -3,7 +3,8 @@ import <fstream>;
 import <string>;
 import <sstream>;
 
-bool validate(const std::string &word){
+bool validate(std::string word){
+  std::cout << word << std::endl;
   int count{0};
   std::string seen="";
   for(char c:word){
@@ -13,7 +14,7 @@ bool validate(const std::string &word){
       if (s == c) return false;
     }
     seen += c;
-    std::cout << "seen: " << seen << std::endl;
+    // std::cout << "seen: " << seen << std::endl;
     count ++;
   }
   if (count < 5) return false;
