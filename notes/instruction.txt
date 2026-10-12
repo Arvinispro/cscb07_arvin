@@ -22,6 +22,6 @@ How to run seperate declaration and definition files on main.cc
 4. ./<name-of-execuble>
 
 How to copy any files on ssh to local:
-1. scp scp yangy607@mathlab.utsc.utoronto.ca:<remote/dir/file.cc> <local/dir>
+1. scp yangy607@mathlab.utsc.utoronto.ca:<remote/dir/file.cc> <local/dir>
 2. Enter the password for ssh Connection
 3. Authentication on phone

@@ -23,7 +23,7 @@ test3_3.in
 test3_3.out
 test3_3.args
 test3_3.txt
-test4: Test when the program is invoked incorrectly, expecting 'usage: wordguess [filename]'
+test4: Test when the program is invoked incorrectly, expecting 'usage: wordguess <filename>'
 test4.in
 test4.out
 test4.args
