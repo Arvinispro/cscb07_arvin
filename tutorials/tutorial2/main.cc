@@ -48,8 +48,16 @@ std::ostream &operator<<(std::ostream &cout, const Party &poke) {
 }
 
 // For operator-, argument and return types are given
-Party operator-(const Party& fl, int index) {\
+Party operator-(const Party& fl, int index) {
+  Party rsl;
   // Fill in this operator overload
+  for(int i=0; i<fl.size; i++){
+    if(i != index){
+      rsl.pokemon[rsl.size] = fl.pokemon[i];
+      rsl.size += 1;
+    }
+  }
+  return rsl;
 }
 
 int main() {
