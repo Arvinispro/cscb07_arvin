@@ -9,26 +9,19 @@ struct Party {
 };
 
 // Fill in the return type and arguments
-std::istream &operator>>(std::istream &cin, const Party &poke) {
+std::istream &operator>>(std::istream &cin, Party &poke) {
   // Fill in this operator overload
   std::string name;
   cin >> name;
-  std::cout << name;
   if(poke.size < 6){
     poke.pokemon[poke.size] = name;
     poke.size += 1;
-  }
-  else if(poke.size == 6){
-    //delete the first one
-
-    //add it to the end
-    poke.pokemon[poke.size-1] = name;
   }
   return cin;
 }
 
 // Fill in the return type and arguments
-std::ostream &operator<<(std::ostream &cout, const Party &poke) {
+std::ostream &operator<<(std::ostream &cout, Party &poke) {
   // Fill in this operator overload
   cout << "I have " << poke.size << " pokemon(s). They are:" << std::endl;
   if(poke.size>=2){
