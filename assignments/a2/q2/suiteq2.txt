@@ -10,3 +10,6 @@ test3.out
 test4: test left and right, total step, and manhatan distance
 test4.in 
 test4.out
+test5: test back and forth in all directions, total step, and manhatan distance
+test5.in 
+test5.out
