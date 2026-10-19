@@ -1,0 +1,47 @@
+Canvas A created (4x4).
++----+
+|....|
+|....|
+|....|
+|....|
++----+
+Set (2,3) of canvas A to '.'.
+Set (1,2) of canvas A to '#'.
+Set (0,0) of canvas A to '*'.
+Set (3,0) of canvas A to '*'.
+Set (0,3) of canvas A to '*'.
+Set (3,3) of canvas A to '*'.
+Position (-3,-2) is outside canvas A.
++----+
+|*..*|
+|....|
+|.#..|
+|*..*|
++----+
+Position (100,100) is outside canvas A.
+Position (-3,100) is outside canvas A.
+Canvas A was moved to canvas B.
+(empty)
+Position (3,2) is outside canvas A.
+Canvas B was moved to canvas A.
++----+
+|*..*|
+|....|
+|.#..|
+|*..*|
++----+
+Canvas C is now a copy of canvas A.
+Set (3,2) of canvas C to '@'.
++----+
+|*..*|
+|....|
+|.#..|
+|*..*|
++----+
++----+
++----+
+|*..*|
+|....|
+|.#.@|
+|*..*|
++----+

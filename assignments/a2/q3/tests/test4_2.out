@@ -1,0 +1,15 @@
++----+
+|*..*|
+|....|
+|.#.@|
+|*..*|
++----+
+(0,0) of canvas C is '*'.
+(0,3) of canvas C is '*'.
+(3,0) of canvas C is '*'.
+(3,3) of canvas C is '*'.
+(2,3) of canvas C is '.'.
+(1,3) of canvas C is '#'.
+(3,2) of canvas C is '@'.
+Position (0,100) is outside canvas C.
+Position (1,1) is outside canvas B.

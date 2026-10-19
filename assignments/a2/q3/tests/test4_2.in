@@ -1,0 +1,19 @@
+new C 4 4 .
+set C 2 3 .
+set C 1 2 #
+set C 0 0 *
+set C 3 0 *
+set C 0 3 *
+set C 3 3 *
+set C 3 2 @
+print C
+get C 0 0
+get C 0 3
+get C 3 0
+get C 3 3
+get C 2 3
+get C 1 2
+get C 3 2
+get C 0 100
+get B 1 1
+quit

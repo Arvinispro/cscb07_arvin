@@ -1,0 +1,21 @@
+new A 4 4 .
+print A
+set A 2 3 .
+set A 1 2 #
+set A 0 0 *
+set A 3 0 *
+set A 0 3 *
+set A 3 3 *
+set A -3 -2 .
+print A
+set B 100 100 &
+set B -3 100 &
+move A B
+print A
+set A 3 2 &
+move B A
+print A
+copy A C
+set C 3 2 @
+print A
+quit
