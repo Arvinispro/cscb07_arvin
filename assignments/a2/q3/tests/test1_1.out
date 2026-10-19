@@ -1,9 +1,23 @@
-Canvas A created (0x3).
-++
-||
-||
-||
-++
-Canvas A created (5x0).
+Canvas A created (5x1).
 +-----+
+|.....|
++-----+
+Canvas B created (1x3).
++-+
+|.|
+|.|
+|.|
++-+
+Canvas C created (3x1).
++---+
+|...|
++---+
+Canvas D created (5x6).
++-----+
+|.....|
+|.....|
+|.....|
+|.....|
+|.....|
+|.....|
 +-----+

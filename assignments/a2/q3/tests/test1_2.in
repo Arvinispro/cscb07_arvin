@@ -1,0 +1,4 @@
+new A 5 3 o
+print A
+new B 5 3 $
+print B
