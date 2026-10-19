@@ -18,7 +18,7 @@ Set (8,8) of canvas A to '*'.
 |*.......*|
 +---------+
 Canvas B is now a copy of canvas A.
-Canvas A filled with '.’.
+Canvas A filled with '.'.
 +---------+
 |.........|
 |.........|
@@ -30,7 +30,7 @@ Canvas A filled with '.’.
 |.........|
 |.........|
 +---------+
-Canvas A filled with '.’.
+Canvas A filled with '.'.
 +---------+
 |*********|
 |*********|
@@ -44,7 +44,7 @@ Canvas A filled with '.’.
 +---------+
 Canvas A was moved to canvas C.
 (empty)
-Canvas A filled with '.’.
+Canvas A filled with '.'.
 (empty)
 Canvas A is empty.
 Canvas C is 9x9.
