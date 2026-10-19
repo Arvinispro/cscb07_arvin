@@ -23,12 +23,9 @@ Set (5,2) of canvas A to '#'.
 |.........|
 |*.......*|
 +---------+
-Canvas B does not exist.
 Canvas A was moved to canvas B.
 (empty)
-Position (3,2) is outside canvas A.
 Canvas B was moved to canvas A.
-Position (100,32) is outside canvas A.
 Canvas C is now a copy of canvas A.
 Set (3,2) of canvas C to '@'.
 +---------+
