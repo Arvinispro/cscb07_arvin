@@ -1,0 +1,22 @@
+Canvas A created (2x2).
+Canvas A was moved to canvas B.
+Canvas C is now a copy of canvas A.
+(empty)
+Canvas A is now a copy of canvas A.
+(empty)
+Canvas A was moved to canvas A.
+(empty)
+Canvas A was moved to canvas D.
+(empty)
+Canvas D is empty.
+Canvas A is now a copy of canvas B.
++--+
+|##|
+|##|
++--+
++--+
+|##|
+|##|
++--+
+Canvas C was moved to canvas B.
+(empty)

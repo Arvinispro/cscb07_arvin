@@ -15,3 +15,9 @@ test4_2.out
 test5: Test fill and size on empty, copied, and not existed canvases. Filled with . or *
 test5.in
 test5.out
+test6: Empty canvas as source: copy/move empty X to new Y, self copy/move of empty, copy into empty Y, move empty into non-empty Y
+test6.in
+test6.out
+test7: new on exmpty canvas, invalid name as second argument of copy/move, invalid name in new, commands after quit ignored
+test6.in
+test6.out
