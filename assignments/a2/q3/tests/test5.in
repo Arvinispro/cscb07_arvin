@@ -1,0 +1,26 @@
+new A 9 9 .
+size A
+fill B .
+size B
+set A 5 5 .
+set A 5 2 #
+set A 0 0 *
+set A 8 0 *
+set A 0 8 *
+set A 8 8 *
+print A
+copy A B
+fill A .
+print A
+fill B *
+print B
+move A C
+print A
+fill A .
+print A
+size A
+size C
+new D 2 4 .
+size D
+copy D B
+size B
