@@ -18,4 +18,5 @@ print A
 copy A C
 set C 3 2 @
 print A
+print C
 quit
