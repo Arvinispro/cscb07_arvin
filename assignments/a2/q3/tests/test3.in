@@ -22,3 +22,4 @@ move D B
 print B
 copy C A
 print A
+quit

@@ -16,3 +16,4 @@ print C
 print B
 copy D B
 print B
+quit
