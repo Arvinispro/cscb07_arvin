@@ -1,8 +1,9 @@
-test1: test creating. Invalid inputs (Should see postive error, not exist error, and already exist), and different canvas size and character c
-test1_1.in
-test1_1.out
-test1_2.in
-test1_2.out
+test1: test creating and delete. Invalid inputs (Should see postive error, not exist error, and already exist), and different canvas size and character c
+test1.in
+test1.out
 test2: test copy. Combination of X exist/not and Y exist/not, different size copies, and self copy
 test2.in
 test2.out
+test3: Test move. Highly similar to test2, but also test if X is empty.
+test3.in
+test3.out

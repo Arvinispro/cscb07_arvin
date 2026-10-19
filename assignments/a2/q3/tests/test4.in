@@ -1,0 +1,20 @@
+new A 9 9 .
+print A
+set A 5 5 .
+set A 5 2 #
+set A 0 0 *
+set A 8 0 *
+set A 0 8 *
+set A 8 8 *
+print A
+set B 100 100 &
+move A B
+print A
+set A 3 2 &
+move B A
+print A
+set A 100 39 &
+copy A C
+set C 3 2 @
+print A
+print C

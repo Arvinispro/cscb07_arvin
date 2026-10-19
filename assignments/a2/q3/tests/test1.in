@@ -15,3 +15,12 @@ new C 3 1 .
 print C
 new D 5 6 .
 print D
+delete A
+new A 5 3 o
+print A
+delete B
+new B 5 3 $
+print B
+move A B
+print A
+delete A
