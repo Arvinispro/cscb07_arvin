@@ -1,3 +1,5 @@
 test1: test creating
 test1_1.in
 test1_1.out
+test1_2.in
+test1_2.out
