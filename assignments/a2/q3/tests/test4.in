@@ -18,3 +18,11 @@ copy A C
 set C 3 2 @
 print A
 print C
+get C 0 0
+get C 8 2
+get C 3 2
+get C 5 2
+get C 0 8
+get C 8 8
+get C 0 100
+get B 1 1
