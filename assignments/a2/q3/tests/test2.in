@@ -1,0 +1,18 @@
+new A 5 3 .
+copy A B
+print B
+new C 2 4 .
+print C
+copy C A
+print C
+copy B B
+print B
+copy D A
+print A
+new D 2 3 .
+print D
+copy D C
+print C
+print B
+copy D B
+print B

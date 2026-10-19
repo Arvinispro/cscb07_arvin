@@ -1,0 +1,50 @@
+Canvas A created (5x3).
+Canvas B is now a copy of canvas A.
++-----+
+|.....|
+|.....|
+|.....|
++-----+
+Canvas C created (2x4).
+Canvas A is now a copy of canvas C.
++--+
+|..|
+|..|
+|..|
+|..|
++--+
+Canvas B is now a copy of canvas B.
++-----+
+|.....|
+|.....|
+|.....|
++-----+
++--+
+|..|
+|..|
+|..|
+|..|
++--+
+Canvas D created (2x3).
++--+
+|..|
+|..|
+|..|
++--+
+Canvas C is now a copy of canvas D.
++--+
+|..|
+|..|
+|..|
++--+
++-----+
+|.....|
+|.....|
+|.....|
++-----+
+Canvas B is now a copy of canvas D.
++--+
+|..|
+|..|
+|..|
++--+
