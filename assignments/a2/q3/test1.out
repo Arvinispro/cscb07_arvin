@@ -1,0 +1,16 @@
+Canvas A created (5x3).
++-----+
+|.....|
+|.....|
+|.....|
++-----+
+Set (0,0) of canvas A to '#'.
+Set (4,2) of canvas A to '#'.
+(0,0) of canvas A is '#'.
+(1,1) of canvas A is '.'.
++-----+
+|#....|
+|.....|
+|....#|
++-----+
+Canvas A is 5x3.

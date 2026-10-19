@@ -1,0 +1,12 @@
+test1: test cout and initial state
+test1.in 
+test1.out
+test2: test forward moving, total step, and manhatan distance
+test2.in 
+test2.out
+test3: test backward moving, total step, and manhatan distance
+test3.in 
+test3.out
+test4: test left and right, total step, and manhatan distance
+test4.in 
+test4.out
