@@ -1,5 +1,5 @@
 Canvas A created (5x3).
-Canvas B was moved to canvas A.
+Canvas A was moved to canvas B.
 (empty)
 +-----+
 |.....|
@@ -21,7 +21,7 @@ Canvas C was moved to canvas A.
 |..|
 |..|
 +--+
-Canvas B was moved to B.
+Canvas B was moved to canvas B.
 +-----+
 |.....|
 |.....|
