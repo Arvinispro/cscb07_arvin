@@ -6,6 +6,12 @@ Canvas B is now a copy of canvas A.
 |.....|
 +-----+
 Canvas C created (2x4).
++--+
+|..|
+|..|
+|..|
+|..|
++--+
 Canvas A is now a copy of canvas C.
 +--+
 |..|

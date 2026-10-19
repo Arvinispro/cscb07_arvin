@@ -4,7 +4,7 @@ print B
 new C 2 4 .
 print C
 copy C A
-print C
+print A
 copy B B
 print B
 copy D A
