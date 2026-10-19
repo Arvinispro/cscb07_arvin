@@ -20,6 +20,9 @@ Set (3,2) of canvas C to '@'.
 (1,2) of canvas C is '#'.
 (3,2) of canvas C is '@'.
 Position (0,100) is outside canvas C.
+Position (-1,-3) is outside canvas C.
+Position (4,0) is outside canvas C.
+Position (0,4) is outside canvas C.
 Canvas B does not exist.
 Canvas C was moved to canvas A.
 Position (1,1) is outside canvas C.

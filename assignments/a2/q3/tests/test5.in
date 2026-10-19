@@ -1,17 +1,13 @@
-new A 9 9 .
+new A 4 4 .
 size A
 fill B .
 size B
-set A 5 5 .
-set A 5 2 #
 set A 0 0 *
-set A 8 0 *
-set A 0 8 *
-set A 8 8 *
 print A
 copy A B
 fill A .
 print A
+print B
 fill B *
 print B
 move A C

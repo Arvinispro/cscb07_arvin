@@ -11,7 +11,9 @@ Set (0,0) of canvas A to '*'.
 Set (3,0) of canvas A to '*'.
 Set (0,3) of canvas A to '*'.
 Set (3,3) of canvas A to '*'.
-Position (-3,-2) is outside canvas A.
+Position (-1,-2) is outside canvas A.
+Position (0,4) is outside canvas A.
+Position (4,0) is outside canvas A.
 +----+
 |*..*|
 |....|
