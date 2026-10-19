@@ -1,4 +1,11 @@
 Canvas C created (4x4).
++Set (2,3) of canvas C to '.'.
++Set (1,2) of canvas C to '#'.
++Set (0,0) of canvas C to '*'.
++Set (3,0) of canvas C to '*'.
++Set (0,3) of canvas C to '*'.
++Set (3,3) of canvas C to '*'.
++Set (3,2) of canvas C to '@'.
 +----+
 |*..*|
 |....|
@@ -13,4 +20,6 @@ Canvas C created (4x4).
 (1,2) of canvas C is '#'.
 (3,2) of canvas C is '@'.
 Position (0,100) is outside canvas C.
-Position (1,1) is outside canvas B.
+Canvas B does not exist.
+Canvas C was moved to canvas A.
+Position (1,1) is outside canvas C.

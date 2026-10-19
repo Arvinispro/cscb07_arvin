@@ -16,4 +16,6 @@ get C 1 2
 get C 3 2
 get C 0 100
 get B 1 1
+move C A
+get C 1 1
 quit

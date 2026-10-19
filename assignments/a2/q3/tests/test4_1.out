@@ -18,8 +18,8 @@ Position (-3,-2) is outside canvas A.
 |.#..|
 |*..*|
 +----+
-Position (100,100) is outside canvas A.
-Position (-3,100) is outside canvas A.
+Canvas B does not exist.
+Canvas B does not exist.
 Canvas A was moved to canvas B.
 (empty)
 Position (3,2) is outside canvas A.
