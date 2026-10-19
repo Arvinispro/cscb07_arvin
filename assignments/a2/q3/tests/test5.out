@@ -1,5 +1,7 @@
 Canvas A created (9x9).
 Canvas A is 9x9.
+Canvas B does not exist.
+Canvas B does not exist.
 Set (5,5) of canvas A to '.'.
 Set (5,2) of canvas A to '#'.
 Set (0,0) of canvas A to '*'.

@@ -8,8 +8,10 @@ test3: Test move. Highly similar to test2, but also test if X is empty.
 test3.in
 test3.out
 test4: Test get and set. (x,y) in bound and out of bound, on empty, copied, and not existed canvases
-test4.in
-test4.out
+test4_1.in
+test4_1.out
+test4_2.in
+test4_2.out
 test5: Test fill and size on empty, copied, and not existed canvases. Filled with . or *
 test5.in
 test5.out
