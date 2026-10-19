@@ -20,3 +20,5 @@ print B
 move C D
 move D B
 print B
+copy C A
+print A
