@@ -1,0 +1,60 @@
+Canvas A created (5x3).
+Canvas B was moved to canvas A.
+(empty)
++-----+
+|.....|
+|.....|
+|.....|
++-----+
+Canvas C created (2x4).
++--+
+|..|
+|..|
+|..|
+|..|
++--+
+Canvas C was moved to canvas B.
+(empty)
++--+
+|..|
+|..|
+|..|
+|..|
++--+
+Canvas B was moved to B.
++-----+
+|.....|
+|.....|
+|.....|
++-----+
++--+
+|..|
+|..|
+|..|
+|..|
++--+
+Canvas D created (2x3).
++--+
+|..|
+|..|
+|..|
++--+
+Canvas D was moved to canvas C.
+(empty)
++--+
+|..|
+|..|
+|..|
++--+
++-----+
+|.....|
+|.....|
+|.....|
++-----+
+Canvas C was moved to canvas D.
+Canvas D was moved to canvas B.
++--+
+|..|
+|..|
+|..|
++--+

@@ -1,0 +1,22 @@
+new A 5 3 .
+move A B
+print A
+print B
+new C 2 4 .
+print C
+move C A
+print C
+print A
+move B B
+print B
+move D A
+print A
+new D 2 3 .
+print D
+move D C
+print D
+print C
+print B
+move C D
+move D B
+print B
