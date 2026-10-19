@@ -16,6 +16,7 @@ print C
 new D 5 6 .
 print D
 delete A
+delete A
 new A 5 3 o
 print A
 delete B
@@ -24,3 +25,5 @@ print B
 move A B
 print A
 delete A
+new A 1 1 .
+print A
