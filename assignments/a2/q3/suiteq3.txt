@@ -4,7 +4,7 @@ test1.out
 test2: test copy. Combination of X exist/not and Y exist/not, different size copies, and self copy
 test2.in
 test2.out
-test3: Test move. Highly similar to test2, but also test if X is empty.
+test3: Test move. Highly similar to test2, but also test if X is empty and new on empty canvas. 
 test3.in
 test3.out
 test4: Test get and set. (x,y) in bound and out of bound, on empty, copied, and not existed canvases
@@ -15,9 +15,6 @@ test4_2.out
 test5: Test fill and size on empty, copied, and not existed canvases. Filled with . or *
 test5.in
 test5.out
-test6: Empty canvas as source: copy/move empty X to new Y, self copy/move of empty, copy into empty Y, move empty into non-empty Y
-test6.in
-test6.out
-test7: new on exmpty canvas, invalid name as second argument of copy/move, invalid name in new, commands after quit ignored
+test6: Testing name checks for all the operators
 test6.in
 test6.out

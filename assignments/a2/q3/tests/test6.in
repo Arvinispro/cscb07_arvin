@@ -1,17 +1,14 @@
-new A 2 2 #
-move A B
-copy A C
-print C
-copy A A
-print A
-move A A
-print A
-move A D
-print D
-size D
-copy B A
-print A
-print B
-move C B
-print B
-quit
+new E 2 2 .
+new A 2 2 .
+copy E A
+copy A E
+move E A
+move A E
+copy E E
+move E E
+set E 2 1 $
+get E 2 1
+fill E #
+print E
+delete E
+size E

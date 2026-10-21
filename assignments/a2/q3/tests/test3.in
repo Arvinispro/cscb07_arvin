@@ -22,4 +22,5 @@ move D B
 print B
 copy C A
 print A
+new A 2 2 .
 quit
