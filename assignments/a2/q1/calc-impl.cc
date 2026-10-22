@@ -36,6 +36,7 @@ void Calc::op(char oper){
       if (this -> display == 0) {
         this -> result = 0;
         this -> error = this -> isError();
+        std::cout <<"Check" << this -> error;
       }
       else this -> result = this -> result / display;
     }
