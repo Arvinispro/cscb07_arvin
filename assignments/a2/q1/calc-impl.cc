@@ -53,7 +53,7 @@ bool Calc::isError() const{
 }
 
 void Calc::memPlus(){
-  this -> memory = this -> display + this -> result + this -> memory;
+  this -> memory = this -> display + this -> memory;
 }
 
 void Calc::memClear(){
