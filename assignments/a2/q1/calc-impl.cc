@@ -3,7 +3,7 @@ import <iostream>;
 
 std::ostream &operator<<(std::ostream &out, const Calc &c){
   if(c.memory == 0) out << c.display;
-  else  out << c.display << "M: " << c.memory;
+  else  out << c.display << " M: " << c.memory;
   if(c.error) out << " E";
   return out;
 }
