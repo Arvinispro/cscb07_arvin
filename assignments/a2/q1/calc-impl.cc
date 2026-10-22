@@ -45,6 +45,7 @@ void Calc::op(char oper){
 }
 void Calc::equals(){
   op(0);
+  this -> error = false;
   this -> result = this -> result;
   this -> display = this -> result;
 }
