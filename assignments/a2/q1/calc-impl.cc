@@ -21,6 +21,7 @@ void Calc::digit(int digit){
 void Calc::op(char oper){
   if(this -> oper == 0){
     this -> result = this -> display;
+    this -> error = false;
   }
   else{
     if(this -> oper == '+'){
@@ -45,7 +46,6 @@ void Calc::op(char oper){
 }
 void Calc::equals(){
   op(0);
-  this -> error = false;
   this -> result = this -> result;
   this -> display = this -> result;
 }
