@@ -47,6 +47,7 @@ void Calc::equals(){
   this -> display = this -> result;
 }
 bool Calc::isError() const{
+  this -> result = 0;
   return true;
 }
 
