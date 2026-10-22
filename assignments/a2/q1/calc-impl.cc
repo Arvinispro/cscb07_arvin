@@ -1,10 +1,10 @@
 module calc;
-import <iostream>
+import <iostream>;
 
 std::ostream &operator<<(std::ostream &out, const Calc &c){
-  if(memory == 0) out << c.display;
+  if(c.memory == 0) out << c.display;
   else  out << c.display << "M: " << c.memory;
-  if(error) out << ' E';
+  if(c.error) out << ' E';
   return out;
 }
 
