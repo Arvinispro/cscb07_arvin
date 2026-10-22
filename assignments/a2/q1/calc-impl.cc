@@ -24,7 +24,7 @@ void Calc::op(char oper){
   }
   else{
     if(this -> oper == '+'){
-    this -> result = this -> result + display;
+      this -> result = this -> result + display;
     }
     else if(this -> oper == '-'){
       this -> result = this -> result - display;
@@ -33,11 +33,13 @@ void Calc::op(char oper){
       this -> result = this -> result * display;
     }
     else if(this -> oper == '/'){
-      if (this -> display == 0) this -> error = this -> isError();
+      if (this -> display == 0) {
+        this -> result = 0;
+        this -> error = this -> isError();
+      }
       else this -> result = this -> result / display;
     }
   }
-  
   this -> oper = oper;
   this -> display = 0;
 }
@@ -47,7 +49,6 @@ void Calc::equals(){
   this -> display = this -> result;
 }
 bool Calc::isError() const{
-  this -> result = 0;
   return true;
 }
 
