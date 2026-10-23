@@ -1,7 +1,7 @@
 module position;
 import <iostream>;
 
-// Position::Position(int ew = 0, int ns = 0): ew{ew}, ns{ns} {}
+Position::Position(int ew, int ns): ew{ew}, ns{ns} {}
 
 int Position::getEW() const{
   return {this->ew};
