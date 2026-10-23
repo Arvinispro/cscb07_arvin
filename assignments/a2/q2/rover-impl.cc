@@ -1,5 +1,6 @@
 module rover;
 import <iostream>;
+import <string>;
 
 Rover::Rover(): dir{0} {}
 Rover::~Rover(){} //default destructor is enough

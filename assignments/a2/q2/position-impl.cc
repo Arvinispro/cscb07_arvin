@@ -1,13 +1,13 @@
 module position;
 import <iostream>;
 
-Position::Position(int ew = 0, int ns = 0): ew{ew}, ns{ns} {}
+// Position::Position(int ew = 0, int ns = 0): ew{ew}, ns{ns} {}
 
 int Position::getEW() const{
   return {this->ew};
 }
 
-int Poisition::getNS() const{
+int Position::getNS() const{
   return {this->ns};
 }
 
