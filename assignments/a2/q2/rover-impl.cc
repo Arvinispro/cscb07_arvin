@@ -53,8 +53,8 @@ void Rover::backward(int steps){
 
 void Rover::left(){
   this -> dir--;
-  this -> dir = this -> dir % 4;
-  std::cout << this->dir << std::endl;
+  if (this -> dir == -1) this -> dir == 3;
+  // std::cout << this->dir << std::endl;
 }
 
 void Rover::right(){
