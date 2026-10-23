@@ -22,7 +22,7 @@ void Rover::forward(int steps){
         x = 0, y = -1*steps;
         break;
     }
-    Position temp{x, y};
+    Position temp{y, x};
     this -> cur += temp;
     this -> numSteps += steps;
   }
@@ -45,7 +45,7 @@ void Rover::backward(int steps){
         x = 0, y = steps;
         break;
     }
-    Position temp{x, y};
+    Position temp{y, x};
     this -> cur += temp;
     this -> numSteps += steps;
   }
