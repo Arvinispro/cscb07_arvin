@@ -5,7 +5,7 @@ import <string>;
 Rover::Rover(): dir{0} {}
 Rover::~Rover(){} //default destructor is enough
 
-void Rover::forward(int steps = 1){
+void Rover::forward(int steps){
 
   if (steps>0){
     switch(this->dir){
@@ -25,7 +25,7 @@ void Rover::forward(int steps = 1){
   }
 }
 
-void Rover::backward(int steps = 1){
+void Rover::backward(int steps){
   if (steps>0){
     switch(this->dir){
       case 0:
