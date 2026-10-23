@@ -6,40 +6,48 @@ Rover::Rover(): dir{0} {}
 Rover::~Rover(){} //default destructor is enough
 
 void Rover::forward(int steps){
-
+  int x, y;
   if (steps>0){
     switch(this->dir){
       case 0:
-        Position temp{steps, 0};
+        x = steps, y = 0;
+        break;
       case 2:
-        Position temp{-1*steps, 0};
+        x = -1*steps, y = 0;
+        break;
       case 1:
-        Position temp{0, steps};
+        x = 0, y = steps;
+        break;
       case 3:
-        Position temp{0, -1*steps};
-      this -> cur += temp;
-      }
+        x = 0, y = -1*steps;
+        break;
+    }
+    Position temp{x, y};
     this -> cur += temp;
     this -> numSteps += steps;
-    
   }
 }
 
 void Rover::backward(int steps){
+  int x, y;
   if (steps>0){
     switch(this->dir){
       case 0:
-        Position temp{-1*steps, 0};
+        x = -1*steps, y = 0;
+        break;
       case 2:
-        Position temp{steps, 0};
+        x = steps, y = 0;
+        break;
       case 1:
-        Position temp{0, -1*steps};
+        x = 0, y = -1*steps;
+        break;
       case 3:
-        Position temp{0, steps};
-      this -> cur += temp;
+        x = 0, y = steps;
+        break;
     }
+    Position temp{x, y};
+    this -> cur += temp;
     this -> numSteps += steps;
-    
   }
 }
 
