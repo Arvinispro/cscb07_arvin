@@ -6,21 +6,23 @@ Rover::Rover(): dir{0} {}
 Rover::~Rover(){} //default destructor is enough
 
 void Rover::forward(int steps = 1){
+
   if (steps>0){
     switch(this->dir){
       case(0):
-        this -> cur.ns += steps;
+        Position temp{steps, 0};
        break;
       case(2):
-        this -> cur.ns -= steps;
+        Position temp{-1*steps, 0};
        break;
       case(1):
-        this -> cur.ew += steps;
+        Position temp{0, steps};
        break;
       case(3):
-        this -> cur.ew -= steps;
+        Position temp{0, -1*steps};
        break;
     }
+    this -> cur += temp;
     this -> numSteps += steps;
     
   }
@@ -30,18 +32,19 @@ void Rover::backward(int steps = 1){
   if (steps>0){
     switch(this->dir){
       case(0):
-        this -> cur.ns -= steps;
+        Position temp{-1*steps, 0};
        break;
       case(2):
-        this -> cur.ns += steps;
+        Position temp{steps, 0};
        break;
       case(1):
-        this -> cur.ew -= steps;
+        Position temp{0, -1*steps};
        break;
       case(3):
-        this -> cur.ew += steps;
+        Position temp{0, steps};
        break;
     }
+    this -> cur += temp;
     this -> numSteps += steps;
     
   }
@@ -56,7 +59,7 @@ void Rover::right(){
 }
 
 Position Rover::current() const{
-  return this -> curr;
+  return this -> cur;
 }
 
 int direction() const{
@@ -68,7 +71,7 @@ int totalDistance() const{
 }
 
 int manhattanDistance() const{
-  return {this->curr.manhattanDistance()}
+  return {this->cur.manhattanDistance()}
 }
 
 std::ostream &operator<<(std::ostream &out, const Rover &rover){
@@ -87,6 +90,6 @@ std::ostream &operator<<(std::ostream &out, const Rover &rover){
       direction = "West";
       break;
   }
-  out << "Current position: " << rover.curr << ", Facing " << direction;
+  out << "Current position: " << rover.cur << ", Facing " << direction;
   return out;
 }

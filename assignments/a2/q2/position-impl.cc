@@ -16,7 +16,7 @@ int Position::manhattanDistance() const{
   if( ew < 0 ) ew = -1 * ew;
   if( ns < 0 ) ns = -1 * ns;
 
-  return {ns + ew}
+  return {ns + ew};
 }
 
 Position &operator+=(const Position &rhs){
