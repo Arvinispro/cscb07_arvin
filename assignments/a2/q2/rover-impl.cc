@@ -65,7 +65,7 @@ Position Rover::current() const{
   return this -> cur;
 }
 
-int Rover::irection() const{
+int Rover::direction() const{
   return this -> dir;
 }
 
