@@ -9,19 +9,16 @@ void Rover::forward(int steps = 1){
 
   if (steps>0){
     switch(this->dir){
-      case(0):
+      case 0:
         Position temp{steps, 0};
-       break;
-      case(2):
+      case 2:
         Position temp{-1*steps, 0};
-       break;
-      case(1):
+      case 1:
         Position temp{0, steps};
-       break;
-      case(3):
+      case 3:
         Position temp{0, -1*steps};
-       break;
-    }
+      this -> cur += temp;
+      }
     this -> cur += temp;
     this -> numSteps += steps;
     
@@ -31,52 +28,50 @@ void Rover::forward(int steps = 1){
 void Rover::backward(int steps = 1){
   if (steps>0){
     switch(this->dir){
-      case(0):
+      case 0:
         Position temp{-1*steps, 0};
-       break;
-      case(2):
+      case 2:
         Position temp{steps, 0};
-       break;
-      case(1):
+      case 1:
         Position temp{0, -1*steps};
-       break;
-      case(3):
+      case 3:
         Position temp{0, steps};
-       break;
+      this -> cur += temp;
     }
-    this -> cur += temp;
     this -> numSteps += steps;
     
   }
 }
 
 void Rover::left(){
-  this -> dir = --this->dir % 4;
+  this -> dir--;
+  this -> dir = this -> dir % 4;
 }
 
 void Rover::right(){
-  this -> dir = ++this->dir % 4;
+  this -> dir++;
+  this -> dir = this -> dir % 4;
 }
 
 Position Rover::current() const{
   return this -> cur;
 }
 
-int direction() const{
+int Rover::irection() const{
   return this -> dir;
 }
 
-int totalDistance() const{
+int Rover::totalDistance() const{
   return this -> numSteps;
 }
 
-int manhattanDistance() const{
-  return {this->cur.manhattanDistance()}
+int Rover::manhattanDistance() const{
+  return {this->cur.manhattanDistance()};
 }
 
 std::ostream &operator<<(std::ostream &out, const Rover &rover){
   std::string direction;
-  switch(rover.dir){
+  switch(rover.direction()){
     case(0):
       direction = "North";
       break;
@@ -90,6 +85,6 @@ std::ostream &operator<<(std::ostream &out, const Rover &rover){
       direction = "West";
       break;
   }
-  out << "Current position: " << rover.cur << ", Facing " << direction;
+  out << "Current position: " << rover.current() << ", Facing " << direction;
   return out;
 }

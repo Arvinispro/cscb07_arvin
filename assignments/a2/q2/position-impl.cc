@@ -19,13 +19,13 @@ int Position::manhattanDistance() const{
   return {ns + ew};
 }
 
-Position &operator+=(const Position &rhs){
+Position &Position::operator+=(const Position &rhs){
   this -> ew = this -> getEW() + rhs.getEW();
   this -> ns = this -> getNS() + rhs.ns;
   return *this;
 }
 
-Position &operator-=(const Position &rhs){
+Position &Position::operator-=(const Position &rhs){
   this -> ew = this -> getEW() - rhs.getEW();
   this -> ns = this -> getNS() - rhs.ns;
   return *this;
