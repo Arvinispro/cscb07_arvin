@@ -108,7 +108,7 @@ void Canvas::fill(char ch){
 
 void Canvas::print(std::ostream &out) const{
   if(this->isEmpty()) {
-    out << "(empty)";
+    out << "(empty)"<<std::endl;
   }
   else{
     out << "+";
