@@ -67,6 +67,7 @@ Canvas::Canvas(Canvas &&other):width{other.width}, height{other.height}{
 }
 
 Canvas &Canvas::operator=(Canvas &&other){
+  if (this == &other) return *this;
   if(other.isEmpty()){
     this -> width = 0;
     this -> height=0;
