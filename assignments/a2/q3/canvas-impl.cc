@@ -100,7 +100,7 @@ void Canvas::print(std::ostream &out) const{
   }
 }
 
-std::ostream &operator<<(std::ostream &out, const Canvas &canvas){
+std::ostream &Canvas::operator<<(std::ostream &out, const Canvas &canvas){
   out << canvas.print();
   return out;
 }
