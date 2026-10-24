@@ -2,9 +2,9 @@ module canvas;
 import <iostream>;
 import <utility>;
 
-Canvas::Canvas(int width, int height, char ch): width{width}, height{height}, rows{nullptr}{
+Canvas::Canvas(int width, int height, char ch): width{width}, height{height}{
   this -> rows = new char *[width];
-  for(int i=0; i<height; i++) this -> rows[i] = new char[height];
+  for(int i=0; i<width; i++) this -> rows[i] = new char[height];
   
   for(int i=0; i<width; i++){
     for(int j=0; j<height; j++){
@@ -21,7 +21,7 @@ Canvas::Canvas(const Canvas &other): width{other.width}, height{other.height}{
     return;
   }
   this -> rows = new char *[other.width];
-  for(int i=0; i<height; i++) this -> rows[i] = new char[other.height];
+  for(int i=0; i<width; i++) this -> rows[i] = new char[other.height];
 
   for(int i=0;i<other.width;i++){
     for(int j=0;j<other.height;j++){
