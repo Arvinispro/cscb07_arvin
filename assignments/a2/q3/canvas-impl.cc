@@ -31,7 +31,7 @@ Canvas::~Canvas(){
 }
 
 Canvas &Canvas::operator=(const Canvas &other){
-  if(&this == other) return *this;
+  if(this == &other) return *this;
 
   Canvas temp = other;
   std::swap(this -> width, temp.width);
