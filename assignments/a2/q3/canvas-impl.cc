@@ -25,14 +25,12 @@ Canvas::Canvas(const Canvas &other): width{other.width}, height{other.height}{
 }
 
 Canvas::~Canvas(){
-  for(int i=0;i<other.width;i++){
-    for(int j=0;j<other.height;j++){
-      delete this->rows[i][j];
-    }
+  for(int i=0;i<this->width;i++){
+    delete [] this->rows[i];
   }
 }
 
-Canvas &operator=(const Canvas &other){
+Canvas &Canvas::operator=(const Canvas &other){
   if(&this == other) return *this;
 
   Canvas temp = other;
@@ -48,7 +46,7 @@ Canvas::Canvas(Canvas &&other):width{other.width}, height{other.height}{
   other.rows = nullptr;
 }
 
-Canvas &operator=(Canvas &&other){
+Canvas &Canvas::operator=(Canvas &&other){
   std::swap(this -> width, other.width);
   std::swap(this -> height, other.height);
   std::swap(this -> rows, other.rows);
@@ -60,7 +58,7 @@ int Canvas::getWidth() const{
   return this->width;
 }
 int Canvas::getHeight() const{
-  returh this->height;
+  return this->height;
 }
 bool Canvas::isEmpty() const{
   return {this->rows == nullptr};
@@ -89,9 +87,9 @@ void Canvas::print(std::ostream &out) const{
     for(int i=0;i<this->width;i++) out<<"-";
     out << "+";
 
-    for(int j=0;i<this->height;j++){
+    for(int j=0;j<this->height;j++){
       out<<"|";
-      for(int i=0;j<this->width;i++){
+      for(int i=0;i<this->width;i++){
         out << this->rows[i][j];
       }
       out<<"|";
@@ -100,7 +98,6 @@ void Canvas::print(std::ostream &out) const{
     for(int i=0;i<this->width;i++) out<<"-";
     out << "+";
   }
-  return out;
 }
 
 std::ostream &operator<<(std::ostream &out, const Canvas &canvas){
