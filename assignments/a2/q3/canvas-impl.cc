@@ -14,6 +14,12 @@ Canvas::Canvas(int width, int height, char ch): width{width}, height{height}, ro
 }
 
 Canvas::Canvas(const Canvas &other): width{other.width}, height{other.height}{
+  if(other.isEmpty()){
+    this -> width = 0;
+    this -> height=0;
+    this -> rows = nullptr;
+    return;
+  }
   this -> rows = new char *[other.width];
   for(int i=0; i<height; i++) this -> rows[i] = new char[other.height];
 
@@ -33,6 +39,12 @@ Canvas::~Canvas(){
 Canvas &Canvas::operator=(const Canvas &other){
   if(this == &other) return *this;
 
+  if(other.isEmpty()){
+    this -> width = 0;
+    this -> height=0;
+    this -> rows = nullptr;
+    return *this;
+  }
   Canvas temp = other;
   std::swap(this -> width, temp.width);
   std::swap(this -> height, temp.height);
@@ -42,14 +54,30 @@ Canvas &Canvas::operator=(const Canvas &other){
 }
 
 Canvas::Canvas(Canvas &&other):width{other.width}, height{other.height}{
+  if(other.isEmpty()){
+    this -> width = 0;
+    this -> height=0;
+    this -> rows = nullptr;
+    return;
+  }
   std::swap(this -> rows, other.rows);
+  other.width = 0;
+  other.height=0;
   other.rows = nullptr;
 }
 
 Canvas &Canvas::operator=(Canvas &&other){
+  if(other->isEmpty()){
+    this -> width = 0;
+    this -> height=0;
+    this -> rows = nullptr;
+    return *this;
+  }
   std::swap(this -> width, other.width);
   std::swap(this -> height, other.height);
   std::swap(this -> rows, other.rows);
+  other.width = 0;
+  other.height=0;
   other.rows = nullptr;
   return *this;
 }
@@ -85,18 +113,18 @@ void Canvas::print(std::ostream &out) const{
   else{
     out << "+";
     for(int i=0;i<this->width;i++) out<<"-";
-    out << "+";
+    out << "+"<<std::endl;
 
     for(int j=0;j<this->height;j++){
       out<<"|";
       for(int i=0;i<this->width;i++){
         out << this->rows[i][j];
       }
-      out<<"|";
+      out<<"|"<<std::endl;
     }
     out << "+";
     for(int i=0;i<this->width;i++) out<<"-";
-    out << "+";
+    out << "+"<<std::endl;
   }
 }
 
