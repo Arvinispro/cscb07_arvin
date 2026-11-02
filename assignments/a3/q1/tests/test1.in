@@ -1,1 +1,31 @@
-add body
+add body1
+add link1
+add link2
+add link3
+add link4
+add link5
+up
+print
+find link3
+find link4
+list
+up
+add body2
+add link1
+parent
+add link2
+parent
+add link3
+up
+print
+find body2
+list
+find link2
+add link2_1
+add link2_1_1
+parent
+add link2_1_2
+up
+print
+find qweorhs
+list
