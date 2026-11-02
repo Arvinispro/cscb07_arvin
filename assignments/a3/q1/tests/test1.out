@@ -13,21 +13,6 @@
 [Command?]
 <document> is now the current tag.
 [Command?]
-<document>
-  <body1>
-    <link1>
-      <link2>
-        <link3>
-          <link4>
-            <link5>
-            </link5>
-          </link4>
-        </link3>
-      </link2>
-    </link1>
-  </body1>
-</document>
-[Command?]
 <body1> is now the current tag.
 [Command?]
 <link1> is now the current tag.
@@ -49,10 +34,22 @@
 [Command?]
 <document> is now the current tag.
 [Command?]
-<body2> is now the current tag.
+<document>
+  <body1>
+    <link1>
+      <link2>
+        <link3>
+          <link4>
+            <link5>
+            </link5>
+          </link4>
+        </link3>
+        <link2_1>
+        </link2_1>
+        <link2_2>
+        </link2_2>
+      </link2>
+    </link1>
+  </body1>
+</document>
 [Command?]
-<link1> is now the current tag.
-[Command?]
-<body2> is now the current tag.
-[Command?]
-<link2> is now the current tag.

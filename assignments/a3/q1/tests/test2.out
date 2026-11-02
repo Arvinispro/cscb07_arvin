@@ -1,6 +1,14 @@
 [Command?]
 <body2> is now the current tag.
 [Command?]
+<link1> is now the current tag.
+[Command?]
+<body2> is now the current tag.
+[Command?]
+<link2> is now the current tag.
+[Command?]
+<body2> is now the current tag.
+[Command?]
 <link3> is now the current tag.
 [Command?]
 <document> is now the current tag.
@@ -41,8 +49,8 @@
   </body2>
 </document>
 [Command?]
+<qweorhs> not found.
 [Command?]
 <document> has the following children:
-- <body1>
 - <body2>
 [Command?]
