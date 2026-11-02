@@ -6,8 +6,11 @@ add link4
 add link5
 up
 print
+find body1
+find link1
+find link2
 find link3
-find link4
+parent
 list
 up
 add body2
