@@ -12,6 +12,9 @@ find link2
 find link3
 parent
 list
+add link2_1
+parent
+add link2_2
 up
 add body2
 add link1

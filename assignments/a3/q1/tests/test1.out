@@ -28,10 +28,18 @@
   </body1>
 </document>
 [Command?]
+<body1> is now the current tag.
 [Command?]
+<link1> is now the current tag.
 [Command?]
-<document> has the following children:
-- <body1>
+<link2> is now the current tag.
+[Command?]
+<link3> is now the current tag.
+[Command?]
+<link2> is now the current tag.
+[Command?]
+<link2> has the following children:
+- <link3>
 [Command?]
 <document> is now the current tag.
 [Command?]
