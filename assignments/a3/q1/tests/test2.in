@@ -1,17 +1,18 @@
 add body2
-add link1
+add l1
 parent
-add link2
+add l2
 parent
-add link3
+add l3
 up
 find body2
 list
-find link2
-add link2_1
-add link2_1_1
+find l2
+add l21
+add l211
 parent
-add link2_1_2
+add l212
+add l2121
 up
 print
 find qweorhs
