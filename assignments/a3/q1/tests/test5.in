@@ -1,0 +1,30 @@
+add b
+value a
+value ab
+value 12
+value 1.23
+id a
+id ab
+id 12
+id 1.23
+add b1
+id a
+parent
+findid a
+id ab
+parent
+findid ab
+id 12
+parent
+findid 12
+id 1.23
+parent
+findid 1.23
+parent
+add b2
+id b2
+parent
+findid b2
+id j123o3hhro2r
+parent
+findid j123o3hhro2r
