@@ -1,0 +1,20 @@
+i lib01.txt
+p m
+p q
+a l S01
+a l S02
+a l S98
+a l S99
+p q
+a n V01
+a n V99
+p q
+>
+>
+>
+>
+z
+>
+r V99
+p q
+q

@@ -1,0 +1,28 @@
+Library:
+	(S01, "Bulls on Parade", "Evil Empire", "Rage Against the Machine", 231, "Rap metal")
+	(S02, "My Old Ways", "Deadbeat", "Tame Impala", 298, "Psychedelic")
+	(S99, "Dean Town", "The Beautiful Game", "Vulfpeck", 213, "Funk")
+	(V01, "Vancouver's slippery sidewalk science", "CBC News", 152, 1080p)
+	(V02, "Damian Lillard Opens Up on NBA in The Bubble", "The Old Man and The Three", 4459, 1080p)
+	(V99, "What Makes a Good Puzzle?", "Game Maker's Toolkit", 720, 1080p)
+Queue:
+Total: 0 seconds
+Queue:
+	000: (S01, "Bulls on Parade", "Evil Empire", "Rage Against the Machine", 231, "Rap metal") starts in 0 seconds
+	001: (S02, "My Old Ways", "Deadbeat", "Tame Impala", 298, "Psychedelic") starts in 231 seconds
+	002: (S99, "Dean Town", "The Beautiful Game", "Vulfpeck", 213, "Funk") starts in 529 seconds
+Total: 742 seconds
+Queue:
+	000: (V99, "What Makes a Good Puzzle?", "Game Maker's Toolkit", 720, 1080p) starts in 0 seconds
+	001: (V01, "Vancouver's slippery sidewalk science", "CBC News", 152, 1080p) starts in 720 seconds
+	002: (S01, "Bulls on Parade", "Evil Empire", "Rage Against the Machine", 231, "Rap metal") starts in 872 seconds
+	003: (S02, "My Old Ways", "Deadbeat", "Tame Impala", 298, "Psychedelic") starts in 1103 seconds
+	004: (S99, "Dean Town", "The Beautiful Game", "Vulfpeck", 213, "Funk") starts in 1401 seconds
+Total: 1614 seconds
+(V99, "What Makes a Good Puzzle?", "Game Maker's Toolkit", 720, 1080p) 720
+(V01, "Vancouver's slippery sidewalk science", "CBC News", 152, 1080p) 872
+(S01, "Bulls on Parade", "Evil Empire", "Rage Against the Machine", 231, "Rap metal") 1103
+(S02, "My Old Ways", "Deadbeat", "Tame Impala", 298, "Psychedelic") 1401
+(S99, "Dean Town", "The Beautiful Game", "Vulfpeck", 213, "Funk") 213
+Queue:
+Total: 0 seconds
