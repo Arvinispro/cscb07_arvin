@@ -3,7 +3,6 @@ add l1
 add l2
 cut
 add l3
-parent
 cut
 parent
 paste
