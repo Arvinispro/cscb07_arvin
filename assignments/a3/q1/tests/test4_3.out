@@ -10,23 +10,20 @@
 [Command?]
 <l3> is now the current tag.
 [Command?]
+<l3> is now in the clipboard.
 <l1> is now the current tag.
 [Command?]
-<l1> is now in the clipboard.
 <lst> is now the current tag.
 [Command?]
-<document> is now the current tag.
+<l3> is now the current tag.
 [Command?]
-<l1> is now the current tag.
+<l3> has the following children:
 [Command?]
-<l1> has the following children:
-- <l3>
+<lst> is now the current tag.
 [Command?]
-<document> is now the current tag.
-[Command?]
-<document> has the following children:
-- <lst>
+<lst> has the following children:
 - <l1>
+- <l3>
 [Command?]
 <l2> is now the current tag.
 [Command?]
@@ -36,18 +33,18 @@
 [Command?]
 <l2> is now in the clipboard.
 [Command?]
-<document> is now the current tag.
+<lst> is now the current tag.
 [Command?]
 <l2> is now the current tag.
 [Command?]
 <l2> has the following children:
 - <l21>
 [Command?]
-<document> is now the current tag.
+<lst> is now the current tag.
 [Command?]
-<document> has the following children:
-- <lst>
+<lst> has the following children:
 - <l1>
+- <l3>
 - <l2>
 - <l2>
 [Command?]
