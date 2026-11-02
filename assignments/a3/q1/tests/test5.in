@@ -10,21 +10,22 @@ id 1.23
 add b1
 id a
 parent
-findid a
+findId a
 id ab
 parent
-findid ab
+findId ab
 id 12
 parent
-findid 12
+findId 12
 id 1.23
 parent
-findid 1.23
+findId 1.23
 parent
 add b2
 id b2
 parent
-findid b2
+findId b2
 id j123o3hhro2r
+value j123o3hhro2r
 parent
-findid j123o3hhro2r
+findId j123o3hhro2r
