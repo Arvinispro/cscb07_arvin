@@ -15,3 +15,9 @@ add l0
 paste
 up
 print
+add c
+cut
+up
+paste
+up
+list
