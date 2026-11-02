@@ -1,15 +1,18 @@
-test1: Linear structure
+test1: construct an array structure of tags, and test functionality of children, print, find
 test1.in
 test1.out
-test2: Tree structure
+test2: construct a tree structure of tags, and test functionality of children, print, find
 test2.in
 test2.out
-test3: test delete
+test3: test delete on single tag, an array of tags, a tree of tags and the mixed structure. 
 test3.in
 test3.out
-test4: test cut, copy and paste
-test4.in
-test4.out
+test4_1: test cut and paste
+test4_1.in
+test4_1.out
+test4_2: test copy and paste
+test4_2.in
+test4_2.out
 test5: test id, value
 test5.in
 test5.out
