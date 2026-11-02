@@ -1,0 +1,19 @@
+add lst
+add l1
+add l2
+cut
+add l3
+cut
+parent
+paste
+parent
+list
+add l2
+add l21
+parent
+copy
+parent
+paste
+list
+parent
+list

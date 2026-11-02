@@ -13,6 +13,9 @@ test4_1.out
 test4_2: test copy and paste
 test4_2.in
 test4_2.out
+test4_3: test the update in internal clipboard of cut and copy 
+test4_3.in
+test4_3.out
 test5: test id, value
 test5.in
 test5.out
