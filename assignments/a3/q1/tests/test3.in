@@ -1,18 +1,24 @@
 delete
 add en
 delete
-list
 add lst
-add l2
 add l1
-parent
-delete
-list
 add l2
-add l21
 up
 find lst
 delete
-list
-find l2
-list
+add tr
+add t1
+parent
+add t2
+add t21
+parent
+add t22
+parent
+add t3
+add t31
+add t311
+up
+find tr
+delete
+print
