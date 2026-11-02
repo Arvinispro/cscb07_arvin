@@ -41,6 +41,12 @@
 <link2> has the following children:
 - <link3>
 [Command?]
+<link2_1> is now the current tag.
+[Command?]
+<link2> is now the current tag.
+[Command?]
+<link2_2> is now the current tag.
+[Command?]
 <document> is now the current tag.
 [Command?]
 <body2> is now the current tag.
@@ -50,86 +56,3 @@
 <body2> is now the current tag.
 [Command?]
 <link2> is now the current tag.
-[Command?]
-<body2> is now the current tag.
-[Command?]
-<link3> is now the current tag.
-[Command?]
-<document> is now the current tag.
-[Command?]
-<document>
-  <body1>
-    <link1>
-      <link2>
-        <link3>
-          <link4>
-            <link5>
-            </link5>
-          </link4>
-        </link3>
-      </link2>
-    </link1>
-  </body1>
-  <body2>
-    <link1>
-    </link1>
-    <link2>
-    </link2>
-    <link3>
-    </link3>
-  </body2>
-</document>
-[Command?]
-<body2> is now the current tag.
-[Command?]
-<body2> has the following children:
-- <link1>
-- <link2>
-- <link3>
-[Command?]
-<link2> is now the current tag.
-[Command?]
-<link2_1> is now the current tag.
-[Command?]
-<link2_1_1> is now the current tag.
-[Command?]
-<link2_1> is now the current tag.
-[Command?]
-<link2_1_2> is now the current tag.
-[Command?]
-<document> is now the current tag.
-[Command?]
-<document>
-  <body1>
-    <link1>
-      <link2>
-        <link3>
-          <link4>
-            <link5>
-            </link5>
-          </link4>
-        </link3>
-      </link2>
-    </link1>
-  </body1>
-  <body2>
-    <link1>
-    </link1>
-    <link2>
-      <link2_1>
-        <link2_1_1>
-        </link2_1_1>
-        <link2_1_2>
-        </link2_1_2>
-      </link2_1>
-    </link2>
-    <link3>
-    </link3>
-  </body2>
-</document>
-[Command?]
-[Command?]
-<document> has the following children:
-- <body1>
-- <body2>
-[Command?]

@@ -5,7 +5,6 @@ add link3
 add link4
 add link5
 up
-print
 find body1
 find link1
 find link2
@@ -15,23 +14,4 @@ list
 add link2_1
 parent
 add link2_2
-up
-add body2
-add link1
-parent
-add link2
-parent
-add link3
-up
 print
-find body2
-list
-find link2
-add link2_1
-add link2_1_1
-parent
-add link2_1_2
-up
-print
-find qweorhs
-list
