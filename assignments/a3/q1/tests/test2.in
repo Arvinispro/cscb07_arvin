@@ -1,11 +1,11 @@
-add body2
+add b2
 add l1
 parent
 add l2
 parent
 add l3
 up
-find body2
+find b2
 list
 find l2
 add l21

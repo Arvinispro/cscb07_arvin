@@ -1,55 +1,59 @@
 [Command?]
-<body2> is now the current tag.
+<b2> is now the current tag.
 [Command?]
-<link1> is now the current tag.
+<l1> is now the current tag.
 [Command?]
-<body2> is now the current tag.
+<b2> is now the current tag.
 [Command?]
-<link2> is now the current tag.
+<l2> is now the current tag.
 [Command?]
-<body2> is now the current tag.
+<b2> is now the current tag.
 [Command?]
-<link3> is now the current tag.
+<l3> is now the current tag.
 [Command?]
 <document> is now the current tag.
 [Command?]
-<body2> is now the current tag.
+<b2> is now the current tag.
 [Command?]
-<body2> has the following children:
-- <link1>
-- <link2>
-- <link3>
+<b2> has the following children:
+- <l1>
+- <l2>
+- <l3>
 [Command?]
-<link2> is now the current tag.
+<l2> is now the current tag.
 [Command?]
-<link2_1> is now the current tag.
+<l21> is now the current tag.
 [Command?]
-<link2_1_1> is now the current tag.
+<l211> is now the current tag.
 [Command?]
-<link2_1> is now the current tag.
+<l21> is now the current tag.
 [Command?]
-<link2_1_2> is now the current tag.
+<l212> is now the current tag.
+[Command?]
+<l2121> is now the current tag.
 [Command?]
 <document> is now the current tag.
 [Command?]
 <document>
-  <body2>
-    <link1>
-    </link1>
-    <link2>
-      <link2_1>
-        <link2_1_1>
-        </link2_1_1>
-        <link2_1_2>
-        </link2_1_2>
-      </link2_1>
-    </link2>
-    <link3>
-    </link3>
-  </body2>
+  <b2>
+    <l1>
+    </l1>
+    <l2>
+      <l21>
+        <l211>
+        </l211>
+        <l212>
+          <l2121>
+          </l2121>
+        </l212>
+      </l21>
+    </l2>
+    <l3>
+    </l3>
+  </b2>
 </document>
 [Command?]
 [Command?]
 <document> has the following children:
-- <body2>
+- <b2>
 [Command?]
