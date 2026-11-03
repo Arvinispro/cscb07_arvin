@@ -1,4 +1,4 @@
-i lib01.txt
+i tests/lib01.txt
 p m
 p q
 a l S01
