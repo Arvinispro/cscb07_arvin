@@ -1,13 +1,13 @@
 Library:
 	(k1, "st1", "sal1", "sa1", 29, "g1")
 Library:
+	(a2, "vt1", "c1", 2, 9p)
 	(k1, "st1", "sal1", "sa1", 29, "g1")
-	(k2, "vt1", "c1", 2, 9p)
 Library:
+	(a2, "vt1", "c1", 2, 9p)
+	(b3, "st1 +1", "sa1 + e 1", "sal1 +1", 4, "g1 + 1")
 	(k1, "st1", "sal1", "sa1", 29, "g1")
-	(k2, "vt1", "c1", 2, 9p)
-	(k3, "st1 +1", "sa1 + e 1", "sal1 +1", 4, "g1 + 1")
-	(k4, "vt2", "c2", 2, 2p)
+	(k1d, "vt2", "c2", 2, 2p)
 	(v3, "vt3 is good", "c3", 52, 5p)
 Queue:
 	000: (k1, "st1", "sal1", "sa1", 29, "g1") starts in 0 seconds
