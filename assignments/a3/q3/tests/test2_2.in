@@ -1,5 +1,3 @@
-i tests/test2_2_only.txt
-p m
 a m
 s
 k1
@@ -44,6 +42,8 @@ t1
 
 se ee
 g1
+p m
+i tests/test2_2_only.txt
 p m
 i tests/test2_2_failed.txt
 p m
