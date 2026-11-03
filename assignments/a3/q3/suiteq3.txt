@@ -1,6 +1,9 @@
 test1: Test adding single, multiple medias into library and queue with spaces in string elements and non-one duration
 test1.in
 test1.out
-test2: Test adding with sinle/multiple invalid inputs. This should not contain anything in library and queue
-test2.in
-test2.out
+test2_1: Test adding with sinle/multiple invalid inputs. This should not contain anything in library and queue
+test2_1.in
+test2_1.out
+test2_2: Continue test2_1 but also test the i command for valid files and invalid files
+test2_2.in
+test2_2.out

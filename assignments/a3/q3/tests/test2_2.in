@@ -1,4 +1,4 @@
-i test2_2_only.txt
+i tests/test2_2_only.txt
 p m
 a m
 s
@@ -45,8 +45,8 @@ t1
 se ee
 g1
 p m
-i test2_2_failed.txt
+i tests/test2_2_failed.txt
 p m
-i errortest1.txt
-i errortest2.txt
+i tests/errortest1.txt
+i tests/errortest2.txt
 p m
