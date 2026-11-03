@@ -17,7 +17,7 @@ c1
 p m
 a m
 v
-k
+
 vt1
 2
 c1
@@ -58,23 +58,23 @@ c1
 p m
 a m
 v
-k
+      
 vt1
 2
-c
+
 5
 p m
 a m
 v
-k
-vt1
+k1
+
 2
 c1
 0
 p m
 a m
 v
-k
+k1
 vt1
 2
 c1
@@ -82,7 +82,7 @@ c1
 p m
 a m
 v
-k
+k1
 vt1
 2
 c1
