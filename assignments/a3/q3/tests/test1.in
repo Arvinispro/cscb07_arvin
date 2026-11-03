@@ -9,7 +9,7 @@ g1
 p m
 a m
 v
-k2
+a2
 vt1
 2
 c1
@@ -17,7 +17,7 @@ c1
 p m
 a m
 s
-k3
+b3
 st1 +1
 4
 sal1 +1
@@ -25,7 +25,7 @@ sa1 + e 1
 g1 + 1
 a m
 v
-k4
+k1d
 vt2
 2
 c2
