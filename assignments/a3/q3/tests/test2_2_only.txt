@@ -1,0 +1,12 @@
+s
+k1
+only title
+120
+only artist
+only album
+only genera
+v
+S99
+dance dance dance
+20
+base10

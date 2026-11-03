@@ -43,5 +43,9 @@ t1
 se ee
 g1
 p m
-i test2_2.txt
+i test2_2_only.txt
 p m
+i test2_2_failed.txt
+p m
+i errortest1.txt
+i errortest2.txt
