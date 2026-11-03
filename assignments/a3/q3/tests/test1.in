@@ -38,3 +38,10 @@ vt3 is good
 c3
 5
 p m
+a n notexist
+a n k1
+p q
+a l k1
+p q
+a l v3
+p q 
