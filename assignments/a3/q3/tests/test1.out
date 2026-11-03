@@ -7,8 +7,6 @@ Library:
         (k1, "st1", "sal1", "sa1", 1, "g1")
         (k2, "vt1", "c1", 2, 5p)
         (k3, "st1 +1", "sa1 + e 1", "sal1 +1", 4, "g1 + 1")
-        (k4, "vt2", "c2", 19, 2p)
-        (v3, "vt3 is good", "c3", 3, 5p)
 Queue:
         000: (k1, "st1", "sal1", "sa1", 1, "g1") starts in 0 seconds
 Total: 1 seconds
@@ -19,5 +17,4 @@ Total: 2 seconds
 Queue:
         000: (k1, "st1", "sal1", "sa1", 1, "g1") starts in 0 seconds
         001: (k1, "st1", "sal1", "sa1", 1, "g1") starts in 1 seconds
-        002: (v3, "vt3 is good", "c3", 3, 5p) starts in 2 seconds
-Total: 5 seconds
+Total: 2 seconds
