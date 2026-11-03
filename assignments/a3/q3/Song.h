@@ -15,7 +15,7 @@ public:
     // If album.length() < 1 outputs to stderr: "album has length < 1"
     // If genre.length() < 1 outputs to stderr: "genre has length < 1"
     // (Checks are made in order listed.)
-    Song( const std::string & key, const std::string & title, int duration, // duration can't be 0
+    Song( const std::string & key, const std::string & title, int duration, 
          const std::string & artist, const std::string & album, const std::string & genre );
     virtual ~Song();
     virtual void print( std::ostream & out ) const override;
