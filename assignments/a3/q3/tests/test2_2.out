@@ -1,14 +1,23 @@
 Library:
+failed to read in album
 Library:
+failed to read in genre
 Library:
+failed to read in duration
 Library:
+failed to read in key
 Library:
 Library:
 	(S99, "dance dance dance", "base10", 20, 100p)
 	(k1, "only title", "only album", "only artist", 120, "only genera")
+key k1 already exists in library
+key k1 already exists in library
+failed to read in resolution
 Library:
 	(S99, "dance dance dance", "base10", 20, 100p)
 	(k1, "only title", "only album", "only artist", 120, "only genera")
+invalid media type x
+failed to read in duration
 Library:
 	(S99, "dance dance dance", "base10", 20, 100p)
 	(k1, "only title", "only album", "only artist", 120, "only genera")

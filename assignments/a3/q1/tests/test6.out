@@ -17,6 +17,7 @@
 [Command?]
 <a> is now the current tag.
 [Command?]
+<wrong> not found
 [Command?]
 <b> is now the current tag.
 [Command?]
@@ -46,4 +47,5 @@
 [Command?]
 <e> is now the current tag.
 [Command?]
+Tag with id 'a' not found.
 [Command?]

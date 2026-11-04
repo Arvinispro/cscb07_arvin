@@ -1,11 +1,11 @@
 delete
 add en
 delete
-add lst
-add l1
-add l2
+add l
+add 1
+add 2
 up
-find lst
+find l
 delete
 add tr
 add t1
