@@ -53,7 +53,7 @@ for in_file in "${in_files[@]}"; do
         read -r -a args < "$args_file"
     fi
 
-    "$executable" "${args[@]}" < "$in_file" > "$actual_file"
+    "$executable" "${args[@]}" < "$in_file" > "$actual_file" 2>&1
 
     if diff -q "$out_file" "$actual_file" > /dev/null 2>&1; then
         echo "${testname} passed!"
