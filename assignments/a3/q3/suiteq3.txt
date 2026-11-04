@@ -1,15 +1,21 @@
-test1: Test adding single, multiple medias into library and queue with spaces in string elements and non-one duration
+test1: Test adding single, multiple medias into library and queue with spaces in 
+string elements and non-one duration
 test1.in
 test1.out
-test2_1: Test adding with sinle/multiple invalid inputs. This should not contain anything in library and queue
+test2_1: Test adding with sinle/multiple invalid inputs. This should not contain anything in 
+library and queue
 test2_1.in
 test2_1.out
-test2_2: Continue test2_1 but also test the i command for valid files and invalid files
+test2_2: Continue test2_1 but also test the i command for valid files and invalid files. 
+Also test duration where 0's are prefixing
 test2_2.in
 test2_2.out
-test3: Test removing including remove empty key/not exist, remove first/middl/end key, remove and add something back
+test3: Test removing including remove keys not exist, remove first/middl/end key, 
+remove something in the queue, remove and add something back, remove something that is in queue 
+multiple times
 test3.in
 test3.out
-test4: Test play and reset
+test4: Test play and reset including when queue is empty/has 1 element/has multiple elements, play/reset after remove, play
+after  adding into queue, and test the when having over 10 media in queue.
 test4.in
 test4.out
