@@ -7,3 +7,9 @@ test2_1.out
 test2_2: Continue test2_1 but also test the i command for valid files and invalid files
 test2_2.in
 test2_2.out
+test3: Test removing including remove empty key/not exist, remove first/middl/end key, remove and add something back
+test3.in
+test3.out
+test4: Test play and reset
+test4.in
+test4.out
