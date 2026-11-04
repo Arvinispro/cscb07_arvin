@@ -1,0 +1,39 @@
+Library:
+  (ad, "vt1", "c1", 20, 5p)
+  (kk, "vt1", "c1", 13, 5p)
+  (u2, "vt1", "c1", 92, 5p)
+  (uq2, "vt1", "c1", 92, 5p)
+  (z1, "vt1", "c1", 17, 5p)
+Queue:
+  000: (kk, "vt1", "c1", 13, 5p) starts in 0 seconds
+  001: (u2, "vt1", "c1", 92, 5p) starts in 13 seconds
+  002: (z1, "vt1", "c1", 17, 5p) starts in 105 seconds
+Total: 122 seconds
+Library:
+  (ad, "vt1", "c1", 20, 5p)
+  (kk, "vt1", "c1", 13, 5p)
+  (uq2, "vt1", "c1", 92, 5p)
+  (z1, "vt1", "c1", 17, 5p)
+Queue:
+  000: (kk, "vt1", "c1", 13, 5p) starts in 0 seconds
+  001: (z1, "vt1", "c1", 17, 5p) starts in 13 seconds
+Total: 30 seconds
+Library:
+  (ad, "vt1", "c1", 20, 5p)
+  (kk, "vt1", "c1", 13, 5p)
+  (u2, "vt1", "c1", 92, 5p)
+  (uq2, "vt1", "c1", 92, 5p)
+  (z1, "vt1", "c1", 17, 5p)
+Queue:
+  000: (kk, "vt1", "c1", 13, 5p) starts in 0 seconds
+  001: (z1, "vt1", "c1", 17, 5p) starts in 13 seconds
+Total: 30 seconds
+Library:
+  (ad, "vt1", "c1", 20, 5p)
+  (kk, "vt1", "c1", 13, 5p)
+  (u2, "vt1", "c1", 92, 5p)
+  (uq2, "vt1", "c1", 92, 5p)
+Library:
+  (kk, "vt1", "c1", 13, 5p)
+  (u2, "vt1", "c1", 92, 5p)
+  (uq2, "vt1", "c1", 92, 5p)
