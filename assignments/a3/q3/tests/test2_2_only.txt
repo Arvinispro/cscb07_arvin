@@ -1,7 +1,7 @@
 s
 k1
 only title
-120
+00000120
 only artist
 only album
 only genera
