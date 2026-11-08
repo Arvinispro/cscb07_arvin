@@ -20,10 +20,14 @@ Tag::Tag(const Tag &other): parent{other.parent}, children{other.children ? new 
   this -> childrenCapacity = other.childrenCapacity;
 }
 
-Tag::Tag(Tag &&other){
-  Tag temp = other;
-  std::swap(temp);
-  delete other; // looks like every Node is in heap.
+Tag::Tag(Tag &&other): parent{other.parent}, children{other.children ? new Tag *[other.childrenCapacity] : nullptr}{
+  this -> type = other.type;
+  this -> id = other.id;
+  this -> value = other.value;
+  for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i]);
+  this -> childrenLength = other.childrenLength;
+  this -> childrenCapacity = other.childrenCapacity;
+  delete other;
 }
 
 Tag::~Tag(){
@@ -41,6 +45,7 @@ Tag &Tag::operator=(Tag &&other){
   std::swap(this -> children, temp.children);
   std::swap(this -> childrenLength, temp.childrenLength);
   std::swap(this -> childrenCapacity, temp.childrenCapacity);
+  delete other;
 }
 
 const std::string &Tag::getType() const{
