@@ -89,23 +89,23 @@ void Tag::setParent(Tag *_parent){
 // If this tag does not have children, don't print anything for the ...children line.
 
 std::ostream &operator<<(std::ostream &out, const Tag &tag){
-  out << "<" << tag.type ;
-  if(tag.id != ""){
-    out << " id='" << tag.id << "' ";
+  out << "<" << tag.getType();
+  if(tag.getId() != ""){
+    out << " id='" << tag.getId() << "' ";
   }
-  if(tag.value != ""){
-    out << " value='" << tag.value << "' ";
+  if(tag.getValue() != ""){
+    out << " value='" << tag.getValue() << "' ";
   }
   out << ">" << std::endl;
   return out;
 }
-void Tag::print(std::ostream &out, int indentLevel = 0) const{
+void Tag::print(std::ostream &out, int indentLevel) const{
   for(int i=0; i < indentLevel; ++i){
     out << "  ";
   }
   out << this;
   for(int i=0; i < this -> childrenLength; ++i){
-    out << this -> children[i] -> print(++indentLevel);
+    this -> children[i] -> print(out, ++indentLevel);
   }
   for(int i=0; i < indentLevel-1; ++i){
     out << "  ";
@@ -131,7 +131,7 @@ void Tag::addChild(Tag *other){
 // (Does NOT delete other).
 void Tag::removeChild(Tag *other){
   for(int i=0; i<this->childrenLength; ++i){
-    if(&this->children[i]==other) this -> children[i] = nullptr;
+    if(this->children[i]==other) this -> children[i] = nullptr;
   }
 
 }
@@ -139,7 +139,7 @@ void Tag::removeChild(Tag *other){
 // If no such tag is found, returns nullptr.
 Tag *Tag::findChild(std::string &type){
   for(int i=0; i<this->childrenLength; ++i){
-    if(&this->children[i]->type==type) return {this->children[i]};
+    if(this->children[i]->type==type) return {this->children[i]};
   }
   return {nullptr};
 }
@@ -147,7 +147,7 @@ Tag *Tag::findChild(std::string &type){
 // If no such tag is found, returns nullptr.
 Tag *Tag::findChildId(std::string &id){
   for(int i=0; i<this->childrenLength; ++i){
-    if(&this->children[i]->id==id) return {this->children[i]};
+    if(this->children[i]->id==id) return {this->children[i]};
   }
   return {nullptr};
 }
