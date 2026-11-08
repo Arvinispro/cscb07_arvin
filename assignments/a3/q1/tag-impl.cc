@@ -73,7 +73,7 @@ Tag *Tag::getParent() const{
   return this->parent;
 }
 // Sets the value of the parent field
-void setParent(Tag *_parent){
+void Tag::setParent(Tag *_parent){
   this->parent = _parent;
 }
 
@@ -88,8 +88,8 @@ void setParent(Tag *_parent){
 // If the id or value attributes are empty (""), do not print them.
 // If this tag does not have children, don't print anything for the ...children line.
 
-std::ostream &Tag::operator<<(std::ostream &out, const Tag &tag){
-  out << "<" << tag.type 
+std::ostream &operator<<(std::ostream &out, const Tag &tag){
+  out << "<" << tag.type ;
   if(tag.id != ""){
     out << " id='" << tag.id << "' ";
   }
@@ -105,7 +105,7 @@ void Tag::print(std::ostream &out, int indentLevel = 0) const{
   }
   out << this;
   for(int i=0; i < this -> childrenLength; ++i){
-    this -> children[i] -> print(out, ++identLevel);
+    out << this -> children[i] -> print(++indentLevel);
   }
   for(int i=0; i < indentLevel-1; ++i){
     out << "  ";
