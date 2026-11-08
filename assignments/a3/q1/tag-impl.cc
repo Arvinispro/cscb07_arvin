@@ -46,6 +46,7 @@ Tag &Tag::operator=(Tag &&other){
   std::swap(this -> childrenLength, temp.childrenLength);
   std::swap(this -> childrenCapacity, temp.childrenCapacity);
   delete &other;
+  return *this;
 }
 
 const std::string &Tag::getType() const{
@@ -86,17 +87,6 @@ void setParent(Tag *_parent){
 // For each indentLevel, add two spaces to the beginning of the line
 // If the id or value attributes are empty (""), do not print them.
 // If this tag does not have children, don't print anything for the ...children line.
-std::string Tag::indentLevel(int i){
-  rsl = "";
-  for(int ident=0; ident < i; ++ident){
-    rsl += "  "
-  }
-  return rsl;
-}
-
-int Tag::Level(int i){
-  return ++i;
-}
 
 std::ostream &Tag::operator<<(std::ostream &out, const Tag &tag){
   out << "<" << tag.type 
@@ -107,8 +97,9 @@ std::ostream &Tag::operator<<(std::ostream &out, const Tag &tag){
     out << " value='" << tag.value << "' ";
   }
   out << ">" << std::endl;
+  return out;
 }
-void print(std::ostream &out, int indentLevel = 0) const{
+void Tag::print(std::ostream &out, int indentLevel = 0) const{
   for(int i=0; i < indentLevel; ++i){
     out << "  ";
   }
