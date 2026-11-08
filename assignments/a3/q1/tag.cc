@@ -14,8 +14,6 @@ export class Tag {
     int childrenCapacity; // current capacity of the children array
     /* Insert other private methods here if needed */
 
-    std::string indentLevel(int i);
-    int Level(int i);
 
   public:
     // Normal constructor
