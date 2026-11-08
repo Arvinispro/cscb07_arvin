@@ -32,7 +32,7 @@ Tag::Tag(Tag &&other): parent{other.parent}, children{other.children ? new Tag *
 
 Tag::~Tag(){
   this -> parent = nullptr; // unless the parent will be deleted
-  for(int i=0; i< this.childrenLength; ++i) delete this->children[i];
+  for(int i=0; i< this -> childrenLength; ++i) delete this->children[i];
   delete [] this -> children;
 }
 
