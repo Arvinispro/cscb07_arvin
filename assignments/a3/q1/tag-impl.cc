@@ -36,6 +36,18 @@ Tag::~Tag(){
   delete [] this -> children;
 }
 
+Tag &Tag::operator=(const Tag &other){
+  Tag temp = other;
+  std::swap(this -> type, temp.type);
+  std::swap(this -> id, temp.id);
+  std::swap(this -> value, temp.value);
+  std::swap(this -> parent, temp.parent);
+  std::swap(this -> children, temp.children);
+  std::swap(this -> childrenLength, temp.childrenLength);
+  std::swap(this -> childrenCapacity, temp.childrenCapacity);
+  return *this;
+}
+
 Tag &Tag::operator=(Tag &&other){
   Tag temp = Tag(other);
   std::swap(this -> type, temp.type);
