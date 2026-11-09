@@ -26,7 +26,9 @@ Tag::Tag(Tag &&other): parent{other.parent}, children{other.children ? new Tag *
   this -> type = other.type;
   this -> id = other.id;
   this -> value = other.value;
-  for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i]);
+  if(this->children != nullptr){
+    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i]);
+  }
   this -> childrenLength = other.childrenLength;
   this -> childrenCapacity = other.childrenCapacity;
   delete &other;
