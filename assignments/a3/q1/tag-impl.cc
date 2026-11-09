@@ -105,25 +105,27 @@ void Tag::setParent(Tag *_parent){
 // If this tag does not have children, don't print anything for the ...children line.
 
 std::ostream &operator<<(std::ostream &out, const Tag &tag){
-  out << "<" << tag.getType();
-  if(tag.getId() != ""){
-    out << " id='" << tag.getId() << "' ";
-  }
-  if(tag.getValue() != ""){
-    out << " value='" << tag.getValue() << "' ";
-  }
-  out << ">" << std::endl;
+  tag.print(out, 0);
   return out;
 }
 void Tag::print(std::ostream &out, int indentLevel) const{
   for(int i=0; i < indentLevel; ++i){
     out << "  ";
   }
-  out << this;
-  out << childrenLength;
+
+  out << "<" << tag->type;
+  if(tag -> id != ""){
+    out << " id='" << tag -> id << "' ";
+  }
+  if(tag->value != ""){
+    out << " value='" << tag->value << "' ";
+  }
+  out << ">" << std::endl;
+
   for(int i=0; i < this -> childrenLength; ++i){
     this -> children[i] -> print(out, ++indentLevel);
   }
+  
   for(int i=0; i < indentLevel-1; ++i){
     out << "  ";
   }
