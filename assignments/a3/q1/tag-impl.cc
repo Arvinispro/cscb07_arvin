@@ -115,13 +115,13 @@ void Tag::print(std::ostream &out, int indentLevel) const{
 
   out << "<" << this->type;
   if(this -> id != ""){
-    out << " id='" << this -> id << "' ";
+    out << " id='" << this -> id << "'";
   }
   if(this->value != ""){
-    out << " value='" << this->value << "' ";
+    out << " value='" << this->value << "'";
   }
   out << ">" << std::endl;
-  int next = ++indentLevel;
+  int next = indentLevel+1;
   for(int i=0; i < this -> childrenLength; ++i){
     this -> children[i] -> print(out, next);
   }
