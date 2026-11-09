@@ -120,6 +120,7 @@ void Tag::print(std::ostream &out, int indentLevel) const{
     out << "  ";
   }
   out << this;
+  out << childrenLength;
   for(int i=0; i < this -> childrenLength; ++i){
     this -> children[i] -> print(out, ++indentLevel);
   }
