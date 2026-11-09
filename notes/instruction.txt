@@ -25,3 +25,8 @@ How to copy any files on ssh to local:
 1. scp yangy607@mathlab.utsc.utoronto.ca:<remote/dir/file.cc> <local/dir> (use -r to scp a folder)
 2. Enter the password for ssh Connection
 3. Authentication on phone
+
+Test for leaking, assume program name is <arvin>:
+simple program running: valgrind --leak-check=full ./arvin
+Running test case: valgrind --leak-check=full ./arvin < test.in
+With runSuite: for f in tests/*.in; do echo "== $f"; valgrind --leak-check=full ./arvin < "$f" > /dev/null; done
