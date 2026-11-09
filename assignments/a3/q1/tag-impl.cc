@@ -163,7 +163,7 @@ TagIterator Tag::end() const{
   return *end;
 }
 
-TagIterator::TagIterator(Tag **t)p{t} {}
+TagIterator::TagIterator(Tag **t): p{t} {}
 
 // Returns the tag that this iterator is currently pointing to
 Tag *TagIterator::operator*() const{
