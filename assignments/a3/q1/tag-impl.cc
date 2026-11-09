@@ -176,7 +176,7 @@ TagIterator Tag::begin() const{
 // Returns an iterator past the end of the children array.
 TagIterator Tag::end() const{
   // TagIterator *end = new TagIterator{&this->children[this->childrenLength-1]};
-  return TagIterator{&(this->children[this->childrenLength-1]+1)};
+  return TagIterator{&(this->children[this->childrenLength-1])+1};
 }
 
 TagIterator::TagIterator(Tag **t): t{t} {}
