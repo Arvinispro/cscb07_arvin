@@ -167,17 +167,17 @@ TagIterator::TagIterator(Tag **t): t{t} {}
 
 // Returns the tag that this iterator is currently pointing to
 Tag *TagIterator::operator*() const{
-  return {&this->t};
+  return &(this->t);
 }
 // Advances the iterator
 TagIterator TagIterator::operator++(){
-  return{*(this -> t + 1)};
+  return *(this -> t + 1);
 }
 // Compares this iterator with other; returns true if they point to the same array position.
 bool TagIterator::operator==(const TagIterator &other) const{
   return {this -> t == other.t};
 }
 // Compares this iterator with other; returns true if they do not point to the same array position.
-bool operator!=(const TagIterator &other) const{
+bool TagIterator::operator!=(const TagIterator &other) const{
   return {this -> t != other.t};
 }
