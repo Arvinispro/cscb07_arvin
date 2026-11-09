@@ -16,7 +16,7 @@ Tag::Tag(const Tag &other): parent{other.parent}, children{other.children ? new 
   this -> id = other.id;
   this -> value = other.value;
   if(this->children != nullptr){
-    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i] -> type);
+    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(other.children[i] -> type);
   }
   this -> childrenLength = other.childrenLength;
   this -> childrenCapacity = other.childrenCapacity;
@@ -27,7 +27,7 @@ Tag::Tag(Tag &&other): parent{other.parent}, children{other.children ? new Tag *
   this -> id = other.id;
   this -> value = other.value;
   if(this->children != nullptr){
-    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i] -> type);
+    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(other.children[i] -> type);
   }
   this -> childrenLength = other.childrenLength;
   this -> childrenCapacity = other.childrenCapacity;
