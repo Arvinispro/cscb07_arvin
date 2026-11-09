@@ -3,8 +3,8 @@ import <iostream>;
 import <string>;
 import <utility>;
 
-Tag::Tag(const std::string &type): parent{nullptr}, children{nullptr}{
-  this -> type = type;
+Tag::Tag(const std::string &type): type{type}, parent{nullptr}, children{nullptr}{
+  // this -> type = type;
   this -> id = "";
   this -> value = "";
   this -> childrenLength = 0;
@@ -15,7 +15,9 @@ Tag::Tag(const Tag &other): parent{other.parent}, children{other.children ? new 
   this -> type = other.type;
   this -> id = other.id;
   this -> value = other.value;
-  for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i]);
+  if(this->children != nullptr){
+    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i]);
+  }
   this -> childrenLength = other.childrenLength;
   this -> childrenCapacity = other.childrenCapacity;
 }
