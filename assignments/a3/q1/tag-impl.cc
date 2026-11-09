@@ -154,13 +154,13 @@ Tag *Tag::findChildId(std::string &id){
 
 // Returns an iterator to the start of the children array.
 TagIterator Tag::begin() const{
-  TagIterator begin = new TagIterator{this->children};
-  return begin;
+  TagIterator *begin = new TagIterator{this->children};
+  return *begin;
 }
 // Returns an iterator past the end of the children array.
 TagIterator Tag::end() const{
-  TagIterator end = new TagIterator{this->children[this->childrenLength-1]};
-  return end;
+  TagIterator *end = new TagIterator{&this->children[this->childrenLength-1]};
+  return *end;
 }
 
 TagIterator::TagIterator(Tag **t)p{t} {}
