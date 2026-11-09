@@ -117,7 +117,7 @@ void Tag::print(std::ostream &out, int indentLevel) const{
   if(this -> id != ""){
     out << " id='" << this -> id << "' ";
   }
-  if(tag->value != ""){
+  if(this->value != ""){
     out << " value='" << this->value << "' ";
   }
   out << ">" << std::endl;
