@@ -163,8 +163,7 @@ Tag *Tag::findChild(std::string &type){
   std::cout << childrenLength << std::endl;
   std::cout << childrenCapacity << std::endl;
   for(int i=0; i<this->childrenLength; ++i){
-    if(this->children[i] == nullptr)
-    else{
+    if(this->children[i] != nullptr){
       if( (this->children[i]->type==type)) return {this->children[i]};
     }
     // if(this->children[i] == nullptr) std::cout << "check" << std::endl;
