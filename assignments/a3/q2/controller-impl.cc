@@ -143,7 +143,7 @@ void Controller::paste() {
     }
     // copy tag from clipboard as a new child of the current tag
     Tag *newTag = new Tag{*clip};  // using copy constructor
-    newTag->setParent(cur);
+    cur = cur->getParent();
     cur->addChild(newTag);
     cur = newTag;
     printCurrent();
@@ -155,8 +155,8 @@ void Controller::next(){
         return;
     }
     std::string childtype = cur->getType();
-    newTag->setParent(cur);
-    Tag *child = cur->findChildType(childtype);
+    cur = cur->getParent();
+    Tag *child = cur->findChild(childtype);
     if(child == cur->end()-1){
         cerr << "Current tag is already the last child of its parent." << endl;
         return;
@@ -172,7 +172,7 @@ void Controller::previous(){
     }
     std::string childtype = cur->getType();
     newTag->setParent(cur);
-    Tag *child = cur->findChildType(childtype);
+    Tag *child = cur->findChild(childtype);
     if(child == cur->begin()){
         cerr << "Current tag is already the first child of its parent." << endl;
         return;
