@@ -155,9 +155,9 @@ void Controller::next(){
         return;
     }
     std::string childtype = cur->getType();
-    cur = cur->getParent();
+    Tag *par = cur->getParent();
     Tag **target;
-    for(Tag **child = cur->begin().getT(); child != cur->end().getT(); child++){
+    for(Tag **child = par->begin().getT(); child != par->end().getT(); child++){
         if((*child) -> getType() == childtype){
             target = child;
         }
@@ -176,9 +176,9 @@ void Controller::previous(){
         return;
     }
     std::string childtype = cur->getType();
-    cur = cur->getParent();
+    Tag *par = cur->getParent();
     Tag **target;
-    for(Tag **child = cur->begin().getT(); child != cur->end().getT(); child++){
+    for(Tag **child = par->begin().getT(); child != par->end().getT(); child++){
         if((*child) -> getType() == childtype){
             target = child;
         }
