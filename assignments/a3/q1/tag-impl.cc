@@ -139,10 +139,11 @@ void Tag::addChild(Tag *other){
   }
   if(this->childrenLength >= this -> childrenCapacity){
     this -> childrenCapacity = this -> childrenCapacity * 2;
-    Tag **newchild = new Tag *[this->childrenCapacity];
-    for(int i=0; i<this->childrenLength; ++i){
-      newchild[i] = this->children[i];
-    }
+  }
+
+  Tag **newchild = new Tag *[this->childrenCapacity];
+  for(int i=0; i<this->childrenLength; ++i){
+    newchild[i] = this->children[i];
   }
   // std::cout << childrenCapacity;
   newchild[childrenLength] = other;
