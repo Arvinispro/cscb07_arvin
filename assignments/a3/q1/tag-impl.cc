@@ -151,7 +151,10 @@ void Tag::addChild(Tag *other){
 // (Does NOT delete other).
 void Tag::removeChild(Tag *other){
   for(int i=0; i<this->childrenLength; ++i){
-    if(this->children[i]==other) this -> children[i] = nullptr;
+    if(this->children[i]==other){
+      delete this->children[i];
+      this->children[i] = nullptr;
+    }
   }
 
 }
@@ -159,7 +162,8 @@ void Tag::removeChild(Tag *other){
 // If no such tag is found, returns nullptr.
 Tag *Tag::findChild(std::string &type){
   for(int i=0; i<this->childrenLength; ++i){
-
+    
+    if(this->children[i] -= nullptr) std::cout << 'check' << std::endl;
     if((this->children[i] != nullptr) & (this->children[i]->type==type)) return {this->children[i]};
   }
   return {nullptr};
