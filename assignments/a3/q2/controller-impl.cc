@@ -170,23 +170,23 @@ void Controller::next(){
     printCurrent();
 }
 
-// void Controller::previous(){
-//     if(cur == doc){
-//         cerr << "Current tag is the upper level tag." << endl;
-//         return;
-//     }
-//     std::string childtype = cur->getType();
-//     cur = cur->getParent();
-//     Tag **target;
-//     for(Tag *child : *cur){
-//         if(**(child -> t)->type == childtype){
-//             target = child->t;
-//         }
-//     }
-//     if(target == cur->begin()){
-//         cerr << "Current tag is already the first child of its parent." << endl;
-//         return;
-//     }
-//     cur = target-1;
-//     printCurrent();
-// }
+void Controller::previous(){
+    if(cur == doc){
+        cerr << "Current tag is the upper level tag." << endl;
+        return;
+    }
+    std::string childtype = cur->getType();
+    cur = cur->getParent();
+    Tag **target;
+    for(Tag **child = cur->begin().getT(); child != cur->end().getT(); child++){
+        if((*child) -> getType() == childtype){
+            target = child;
+        }
+    }
+    if(target == cur->begin()){
+        cerr << "Current tag is already the first child of its parent." << endl;
+        return;
+    }
+    cur = *(target-1);
+    printCurrent();
+}

@@ -26,5 +26,5 @@ export class Controller {
     void copy();                          // copies current tag to internal clipboard (tests copy operations)
     void paste();                         // adds tag from internal clipboard as a new child
     void next();
-    // void previous();
+    void previous();
 };
