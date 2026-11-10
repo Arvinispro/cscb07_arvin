@@ -123,7 +123,7 @@ void Tag::print(std::ostream &out, int indentLevel) const{
   out << ">" << std::endl;
   int next = indentLevel+1;
   for(int i=0; i < this -> childrenLength; ++i){
-    this -> children[i] -> print(out, next);
+    if(this->children[i] != nullptr) this -> children[i] -> print(out, next);
   }
 
   for(int i=0; i < indentLevel; ++i){
@@ -151,7 +151,7 @@ void Tag::addChild(Tag *other){
 // (Does NOT delete other).
 void Tag::removeChild(Tag *other){
   for(int i=0; i<this->childrenLength; ++i){
-    if(this->children[i]==other){
+    if((this->children[i] != nullptr) && (this->children[i]==other)){
       this->children[i] = nullptr;
     }
   }
@@ -161,7 +161,7 @@ void Tag::removeChild(Tag *other){
 // If no such tag is found, returns nullptr.
 Tag *Tag::findChild(std::string &type){
   for(int i=0; i<this->childrenLength; ++i){
-    if((this->children[i] != nullptr) &$ (this->children[i]->type==type)) return {this->children[i]};
+    if((this->children[i] != nullptr) && (this->children[i]->type==type)) return {this->children[i]};
   }
   return {nullptr};
 }
@@ -169,7 +169,7 @@ Tag *Tag::findChild(std::string &type){
 // If no such tag is found, returns nullptr.
 Tag *Tag::findChildId(std::string &id){
   for(int i=0; i<this->childrenLength; ++i){
-    if(this->children[i]->id==id) return {this->children[i]};
+    if((this->children[i] != nullptr) && (this->children[i]->id==id)) return {this->children[i]};
   }
   return {nullptr};
 }
