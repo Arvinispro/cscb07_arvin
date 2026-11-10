@@ -160,6 +160,7 @@ void Tag::removeChild(Tag *other){
   }
   this -> children = newchild;
   this -> childrenLength = newlen;
+  for(int i=0; i<this->childrenLength; ++i) std::cout << children[i]-> type << std::endl;
 
 }
 // Returns the first tag in the children array whose type is equal to the supplied parameter.
