@@ -160,14 +160,8 @@ void Tag::removeChild(Tag *other){
 // Returns the first tag in the children array whose type is equal to the supplied parameter.
 // If no such tag is found, returns nullptr.
 Tag *Tag::findChild(std::string &type){
-  std::cout << childrenLength << std::endl;
-  std::cout << childrenCapacity << std::endl;
   for(int i=0; i<this->childrenLength; ++i){
-    if(this->children[i] != nullptr){
-      if( (this->children[i]->type==type)) return {this->children[i]};
-    }
-    // if(this->children[i] == nullptr) std::cout << "check" << std::endl;
-    
+    if((this->children[i] != nullptr) &$ (this->children[i]->type==type)) return {this->children[i]};
   }
   return {nullptr};
 }
