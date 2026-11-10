@@ -157,7 +157,7 @@ void Controller::next(){
     std::string childtype = cur->getType();
     cur = cur->getParent();
     Tag **target;
-    for(TagIterator *child = *(cur->begin()); *child != *(cur->end()); *child++){
+    for(Tag *child = *(cur->begin()); *child != *(cur->end()); *child++){
         if(**child ->type == childtype){
             // target = child->t;
         }
