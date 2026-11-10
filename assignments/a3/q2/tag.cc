@@ -94,6 +94,7 @@ export class TagIterator {
     bool operator==(const TagIterator &other) const;
     // Compares this iterator with other; returns true if they do not point to the same array position.
     bool operator!=(const TagIterator &other) const;
+    Tag **getT();
     friend class Tag;
 };
 
