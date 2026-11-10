@@ -158,11 +158,11 @@ void Controller::next(){
     cur = cur->getParent();
     Tag **target;
     for(Tag **child = cur->begin().getT(); child != cur->end().getT(); child++){
-        if(*child ->type == childtype){
+        if(*(child) -> type == childtype){
             // target = child->t;
         }
     }
-    if(target == *(cur->end())-1){
+    if(target == cur->end().getT()-1){
         cerr << "Current tag is already the last child of its parent." << endl;
         return;
     }
