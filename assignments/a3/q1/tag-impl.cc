@@ -163,7 +163,7 @@ void Tag::removeChild(Tag *other){
 Tag *Tag::findChild(std::string &type){
   for(int i=0; i<this->childrenLength; ++i){
     
-    if(this->children[i] -= nullptr) std::cout << 'check' << std::endl;
+    if(this->children[i] == nullptr) std::cout << 'check' << std::endl;
     if((this->children[i] != nullptr) & (this->children[i]->type==type)) return {this->children[i]};
   }
   return {nullptr};
