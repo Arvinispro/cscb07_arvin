@@ -160,7 +160,7 @@ void Tag::removeChild(Tag *other){
   }
   this -> children = newchild;
   this -> childrenLength = newlen;
-  for(int i=0; i<this->childrenLength; ++i) std::cout << children[i]-> type << std::endl;
+  for(int i=0; i<this->childrenLength; ++i) std::cout << children[i]-> type << std::endl
 
 }
 // Returns the first tag in the children array whose type is equal to the supplied parameter.
@@ -201,7 +201,7 @@ Tag *TagIterator::operator*() const{
 TagIterator TagIterator::operator++(){
   
   this -> t += 1;
-  
+  std::cout << "Hi" << std::endl;
   return TagIterator(this -> t);
 }
 // Compares this iterator with other; returns true if they point to the same array position.
