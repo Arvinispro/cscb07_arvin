@@ -142,7 +142,7 @@ void Tag::addChild(Tag *other){
   if(this->childrenLength >= this -> childrenCapacity){
     this -> childrenCapacity = this -> childrenCapacity * 2;
   }
-  std::cout << childrenCapacity;
+  // std::cout << childrenCapacity;
   this-> children[childrenLength] = other;
   this -> childrenLength ++;
 }
@@ -159,7 +159,8 @@ void Tag::removeChild(Tag *other){
 // If no such tag is found, returns nullptr.
 Tag *Tag::findChild(std::string &type){
   for(int i=0; i<this->childrenLength; ++i){
-    if(this->children[i]->type==type) return {this->children[i]};
+
+    if((this != nullptr) & (this->children[i]->type==type)) return {this->children[i]};
   }
   return {nullptr};
 }
