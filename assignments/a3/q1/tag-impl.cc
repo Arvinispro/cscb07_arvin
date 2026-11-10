@@ -31,7 +31,7 @@ Tag::Tag(Tag &&other): parent{other.parent}, children{other.children ? new Tag *
   }
   this -> childrenLength = other.childrenLength;
   this -> childrenCapacity = other.childrenCapacity;
-  delete &other;
+  // delete &other;
 }
 
 Tag::~Tag(){
@@ -61,7 +61,7 @@ Tag &Tag::operator=(Tag &&other){
   std::swap(this -> children, temp.children);
   std::swap(this -> childrenLength, temp.childrenLength);
   std::swap(this -> childrenCapacity, temp.childrenCapacity);
-  delete &other;
+  // delete &other;
   return *this;
 }
 
@@ -152,7 +152,6 @@ void Tag::addChild(Tag *other){
 void Tag::removeChild(Tag *other){
   for(int i=0; i<this->childrenLength; ++i){
     if(this->children[i]==other){
-      delete this->children[i];
       this->children[i] = nullptr;
     }
   }
@@ -163,7 +162,7 @@ void Tag::removeChild(Tag *other){
 Tag *Tag::findChild(std::string &type){
   for(int i=0; i<this->childrenLength; ++i){
     
-    if(this->children[i] == nullptr) std::cout << 'check' << std::endl;
+    if(this->children[i] == nullptr) std::cout << "check" << std::endl;
     if((this->children[i] != nullptr) & (this->children[i]->type==type)) return {this->children[i]};
   }
   return {nullptr};
