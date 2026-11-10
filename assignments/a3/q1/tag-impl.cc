@@ -142,6 +142,7 @@ void Tag::addChild(Tag *other){
   if(this->childrenLength >= this -> childrenCapacity){
     this -> childrenCapacity = this -> childrenCapacity * 2;
   }
+  std::cout << childrenCapacity;
   this-> children[childrenLength] = other;
   this -> childrenLength ++;
 }
