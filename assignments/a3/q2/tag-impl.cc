@@ -209,11 +209,6 @@ TagIterator TagIterator::operator++(){
   return TagIterator(this -> t);
 }
 
-TagIterator TagIterator::operator--(){
-  
-  this -> t -= 1;
-  return TagIterator(this -> t);
-}
 // Compares this iterator with other; returns true if they point to the same array position.
 bool TagIterator::operator==(const TagIterator &other) const{
   return {this -> t == other.t};

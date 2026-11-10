@@ -156,12 +156,17 @@ void Controller::next(){
     }
     std::string childtype = cur->getType();
     cur = cur->getParent();
-    Tag *child = cur->findChild(childtype);
-    if(child == cur->end()-1){
+    Tag *target;
+    for(Tag *child : *cur){
+        if(child -> t == childtype){
+            target = child;
+        }
+    }
+    if(target == cur->end()-1){
         cerr << "Current tag is already the last child of its parent." << endl;
         return;
     }
-    cur++;
+    cur = target+1 ;
     printCurrent();
 }
 
@@ -171,12 +176,17 @@ void Controller::previous(){
         return;
     }
     std::string childtype = cur->getType();
-    newTag->setParent(cur);
-    Tag *child = cur->findChild(childtype);
-    if(child == cur->begin()){
+    cur = cur->getParent();
+    Tag *target;
+    for(Tag *child : *cur){
+        if(child -> t == childtype){
+            target = child;
+        }
+    }
+    if(target == cur->begin()){
         cerr << "Current tag is already the first child of its parent." << endl;
         return;
     }
-    cerr--;
+    cur = target-1;
     printCurrent();
 }
