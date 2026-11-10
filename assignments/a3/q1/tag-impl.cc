@@ -150,7 +150,7 @@ void Tag::addChild(Tag *other){
 // If other is not in the array, does nothing.
 // (Does NOT delete other).
 void Tag::removeChild(Tag *other){
-  Tag **newchild[this->childrenCapacity];
+  Tag *newchild[this->childrenCapacity];
   int newlen = 0;
   for(int i=0; i<this->childrenLength; ++i){
     if(this->children[i]!=other){
