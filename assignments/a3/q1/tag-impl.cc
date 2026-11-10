@@ -16,7 +16,7 @@ Tag::Tag(const Tag &other): parent{other.parent}, children{other.children ? new 
   this -> id = other.id;
   this -> value = other.value;
   if(this->children != nullptr){
-    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(other.children[i] -> type);
+    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i]);
   }
   this -> childrenLength = other.childrenLength;
   this -> childrenCapacity = other.childrenCapacity;
@@ -27,7 +27,7 @@ Tag::Tag(Tag &&other): parent{other.parent}, children{other.children ? new Tag *
   this -> id = other.id;
   this -> value = other.value;
   if(this->children != nullptr){
-    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(other.children[i] -> type);
+    for(int i=0; i<other.childrenLength; ++i) this->children[i] = new Tag(*other.children[i]);
   }
   this -> childrenLength = other.childrenLength;
   this -> childrenCapacity = other.childrenCapacity;
@@ -123,7 +123,7 @@ void Tag::print(std::ostream &out, int indentLevel) const{
   out << ">" << std::endl;
   int next = indentLevel+1;
   for(int i=0; i < this -> childrenLength; ++i){
-    if(this->children[i] != nullptr) this -> children[i] -> print(out, next);
+    this -> children[i] -> print(out, next);
   }
 
   for(int i=0; i < indentLevel; ++i){
