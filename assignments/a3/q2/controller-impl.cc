@@ -156,9 +156,9 @@ void Controller::next(){
     }
     std::string childtype = cur->getType();
     cur = cur->getParent();
-    Tag *target;
+    Tag **target;
     for(Tag *child : *cur){
-        if(child -> t == childtype){
+        if(**(child -> t)->type == childtype){
             target = child;
         }
     }
@@ -177,9 +177,9 @@ void Controller::previous(){
     }
     std::string childtype = cur->getType();
     cur = cur->getParent();
-    Tag *target;
+    Tag **target;
     for(Tag *child : *cur){
-        if(child -> t == childtype){
+        if(**(child -> t)->type == childtype){
             target = child;
         }
     }
