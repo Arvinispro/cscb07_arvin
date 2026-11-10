@@ -166,7 +166,7 @@ void Controller::next(){
         cerr << "Current tag is already the last child of its parent." << endl;
         return;
     }
-    cur = target+1 ;
+    cur = *(target+1) ;
     printCurrent();
 }
 
