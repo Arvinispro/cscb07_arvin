@@ -139,9 +139,15 @@ void Tag::addChild(Tag *other){
   }
   if(this->childrenLength >= this -> childrenCapacity){
     this -> childrenCapacity = this -> childrenCapacity * 2;
+    Tag **newchild = new Tag *[this->childrenCapacity];
+    for(int i=0; i<this->childrenLength; ++i){
+      newchild[i] = this->children[i];
+    }
   }
   // std::cout << childrenCapacity;
-  this-> children[childrenLength] = other;
+  newchild[childrenLength] = other;
+  delete [] this -> children;
+  this -> children = newchild;
   this -> childrenLength ++;
 }
 // Removes other from the children array.
@@ -156,7 +162,7 @@ void Tag::removeChild(Tag *other){
       ++newlen;
     }
   }
-  // delete [] this -> children;
+  delete [] this -> children;
   this -> children = newchild;
   this -> childrenLength = newlen;
 
