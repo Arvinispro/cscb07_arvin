@@ -162,7 +162,7 @@ void Controller::next(){
             // target = child->t;
         }
     }
-    if(target == cur->end().t-1){
+    if(target == *(cur->end())-1){
         cerr << "Current tag is already the last child of its parent." << endl;
         return;
     }

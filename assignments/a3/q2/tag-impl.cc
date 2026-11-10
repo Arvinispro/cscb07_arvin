@@ -185,6 +185,19 @@ Tag *Tag::findChildId(std::string &id){
   return {nullptr};
 }
 
+// TagIterator Tag::next(std::string &type){
+//   Tag **target;
+//   for(TagIterator *child = cur->begin(); *child != cur->end(); *child++){
+//       if(**child ->type == childtype){
+//           // target = child->t;
+//       }
+//   }
+//   if(target == *(cur->end())-1){
+//         cerr << "Current tag is already the last child of its parent." << endl;
+//         return;
+//     }
+// }
+
 // Returns an iterator to the start of the children array.
 TagIterator Tag::begin() const{
   // TagIterator *begin = new TagIterator{this->children};
