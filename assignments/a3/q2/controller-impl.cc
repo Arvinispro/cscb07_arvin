@@ -183,7 +183,7 @@ void Controller::previous(){
             target = child;
         }
     }
-    if(target == cur->begin()){
+    if(target == cur->begin().getT()){
         cerr << "Current tag is already the first child of its parent." << endl;
         return;
     }
