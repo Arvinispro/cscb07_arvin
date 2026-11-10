@@ -158,7 +158,7 @@ void Controller::next(){
     cur = cur->getParent();
     Tag **target;
     for(TagIterator child = cur->begin(); child != cur->end(); ++child){
-        if((child -> t) ->type == childtype){
+        if(*(child.t) ->type == childtype){
             // target = child->t;
         }
     }
