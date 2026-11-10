@@ -150,7 +150,7 @@ void Tag::addChild(Tag *other){
 // If other is not in the array, does nothing.
 // (Does NOT delete other).
 void Tag::removeChild(Tag *other){
-  Tag *newchild[this->childrenCapacity];
+  Tag **newchild = new Tag *[this->childrenCapacity];
   int newlen = 0;
   for(int i=0; i<this->childrenLength; ++i){
     if(this->children[i]!=other){
@@ -158,9 +158,9 @@ void Tag::removeChild(Tag *other){
       ++newlen;
     }
   }
+  delete [] this -> children;
   this -> children = newchild;
   this -> childrenLength = newlen;
-  for(int i=0; i<this->childrenLength; ++i) std::cout << children[i]-> type << std::endl;
 
 }
 // Returns the first tag in the children array whose type is equal to the supplied parameter.
@@ -201,7 +201,6 @@ Tag *TagIterator::operator*() const{
 TagIterator TagIterator::operator++(){
   
   this -> t += 1;
-  std::cout << "Hi" << std::endl;
   return TagIterator(this -> t);
 }
 // Compares this iterator with other; returns true if they point to the same array position.
