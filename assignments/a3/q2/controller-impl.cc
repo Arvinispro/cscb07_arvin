@@ -162,7 +162,7 @@ void Controller::next(){
             target = child;
         }
     }
-    if(target == cur->end().getT()-1){
+    if(target == par->end().getT()-1){
         cerr << "Current tag is already the last child of its parent." << endl;
         return;
     }
@@ -183,7 +183,7 @@ void Controller::previous(){
             target = child;
         }
     }
-    if(target == cur->begin().getT()){
+    if(target == par->begin().getT()){
         cerr << "Current tag is already the first child of its parent." << endl;
         return;
     }
