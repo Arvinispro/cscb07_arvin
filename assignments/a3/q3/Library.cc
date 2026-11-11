@@ -17,7 +17,7 @@ LibraryIterator Library::begin() const{
 
 LibraryIterator Library::end() const{
   Node *p = this->head;
-  while(p != nullptr) p  = this->head->next;
+  while(p != nullptr) p  = p->next;
   return LibraryIterator{p};
 }     // Iterator set past end of library contents.
 
