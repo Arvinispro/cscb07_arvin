@@ -20,8 +20,10 @@ void Queue::playLast( DigitalMedia * m ){
   this->totalSecond += m->getDuration();
 
   if(this->back == nullptr) this->back = newmedia;
-  else this->back->next = newmedia;
-
+  else {
+    this->back->next = newmedia;
+    this->back = newmedia;
+  }
   if(this->front==nullptr) this->front = newmedia;
 
 }  // adds m to the back of the queue
