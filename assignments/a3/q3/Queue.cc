@@ -40,22 +40,25 @@ DigitalMedia * Queue::play(){
   if(this->front == nullptr) this ->back = nullptr; //only 1 element
   
   this->secondsPlayed += played.m->getDuration();
+  this -> totalSecond -= played.m->getDuration();
   return played.m;
 }
 
 // Removes every occurrence of m from the queue. Does nothing if m isn't in the queue.
 void Queue::remove( DigitalMedia * m ){
   if(this->front == nullptr) return;
+  
   Node *last = this->front;
   Node *p = this->front->next;
-
-  while(last->m == m){
-    this->front = last -> next;
-    last->next = nullptr;
-    delete last;
-    last = p;
-    p = p->next;
-  } //ensuring front is not matching
+  // 1 element
+  if(p == nullptr){
+    if(last->m == m){
+      this -> front = nullptr;
+      this -> back = nullptr;
+      delete last;
+    }
+    return;
+  }
 
   while(p!=nullptr){
     if(p->m == m){
@@ -63,6 +66,7 @@ void Queue::remove( DigitalMedia * m ){
       p->next = nullptr;
       delete p;
     }
+    if(last->next == nullptr) break;
     last = last->next;
     p = last->next;
   }
