@@ -53,7 +53,8 @@ void Queue::remove( DigitalMedia * m ){
     if(last->m == m){
       this -> front = nullptr;
       this -> back = nullptr;
-      delete last;
+      this->totalSecond -= last->m->getDuration();
+      delete last; 
     }
     return;
   }
@@ -62,6 +63,7 @@ void Queue::remove( DigitalMedia * m ){
     if(p->m == m){
       last -> next = p->next;
       p->next = nullptr;
+      this->totalSecond -= p->m->getDuration();
       delete p;
     }
     if(last->next == nullptr) break;

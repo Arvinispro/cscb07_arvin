@@ -122,7 +122,7 @@ std::istream & operator>>( std::istream& in, Library& library ){
     }
     else if(type!=""){
       // std::cout << type << std::endl;
-      std::cerr << "invalid media type" << std::endl;
+      std::cerr << "invalid media type" << type << std::endl;
       in.setstate(std::ios::failbit);
     }
     if(in.eof() || in.fail()) break;
