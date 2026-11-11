@@ -102,7 +102,6 @@ std::istream & operator>>( std::istream& in, Library& library ){
   std::string type;
   while(!in.eof() || !in.fail()){
     std::getline(in, type);
-    std::cout << type << std::endl;
     if(type=="s"){
       Song *s = new Song{ "S01", "Great beat and you can dance to it", 183, "Too cool", 
         "I'd give it a 10!", "Eclectic" };
@@ -115,6 +114,7 @@ std::istream & operator>>( std::istream& in, Library& library ){
       library.add(v);
     }
     else{
+      std::cout << type << std::endl;
       std::cerr << "invalid media type" << std::endl;
       in.setstate(std::ios::failbit);
     }
