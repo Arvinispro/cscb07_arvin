@@ -82,10 +82,9 @@ QueueIterator Queue::end() const{
 // and " starts in N seconds" where N is the iterator's elapsed time at that item. The last
 // line is "Total: N seconds", N being the total duration of the items in the queue.
 std::ostream & operator<<( std::ostream & out, const Queue & q ){
-  out << "Queue:" << std::endl;
   int p1=0, p10=0, p100=0;
 
-  for(QueueIterator p=q.begin(); p != q.end(); ++p){
+  for(QueueIterator p=q.begin(); p != q.end(); p=++p){
     out << "\t" << p100 << p10 << p1 << ": ";
     (*p) -> print(out);
     out << "starts in " << p.getElapsedTime() << " seconds" << std::endl;
