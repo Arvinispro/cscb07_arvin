@@ -25,7 +25,7 @@ void Video::print( std::ostream & out ) const{
   DigitalMedia::print(out);
   out << "\"" << this->channel << "\"" << ", "
   << this -> getDuration()  << ", " 
-  << this -> resolution  << ", " ;
+  << this -> resolution  << ")" ;
 }
 
 const std::string & Video::getChannel() const{

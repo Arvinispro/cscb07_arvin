@@ -37,6 +37,7 @@ DigitalMedia * Queue::play(){
 
   delete this->front;
   this->front = played.next;
+  if(this->front == nullptr) this ->back = nullptr; //only 1 element
   
   this->secondsPlayed += played.m->getDuration();
   return played.m;
@@ -81,8 +82,7 @@ QueueIterator Queue::begin() const{
   return QueueIterator{this->front, 0};
 }        // Iterator set to the front of the queue.
 QueueIterator Queue::end() const{
-  if(this->back == nullptr) return QueueIterator(nullptr, 0);
-  return QueueIterator{nullptr, this->getTotalSeconds()-this->back->m->getDuration()};
+  return QueueIterator{nullptr, 0};
 }  
 
 // Returns modified output stream. Outputs each item on its own line, in queue order, as
