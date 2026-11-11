@@ -99,7 +99,7 @@ std::ostream & operator<<( std::ostream & out, const Queue & q ){
   for(QueueIterator p=q.begin(); p != q.end(); p=++p){
     out << "\t" << p100 << p10 << p1 << ": ";
     (*p) -> print(out);
-    out << "starts in " << p.getElapsedTime() << " seconds" << std::endl;
+    out << " starts in " << p.getElapsedTime() << " seconds" << std::endl;
     ++p1;
     if(p1 == 10){
       ++p10;
