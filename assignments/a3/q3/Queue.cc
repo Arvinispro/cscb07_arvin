@@ -2,7 +2,7 @@
 #include "QueueIterator.h"
 #include "DigitalMedia.h"
 
-Queue::Queue(): front{nullptr}, back{nullptr}, secondsPlayed{0}, totalSecond{0} {}
+Queue::Queue(): front{nullptr}, back{nullptr}, totalSecond{0}, secondsPlayed{0} {}
 Queue::~Queue(){
   // front->m = nullptr;
   // back->m = nullptr;

@@ -19,8 +19,8 @@ QueueIterator QueueIterator::operator++(){
 }
 
 bool QueueIterator::operator==( const QueueIterator & other ) const{
-  return {this->current == other.current} 
+  return {this->current == other.current}; 
 }
 bool QueueIterator::operator!=( const QueueIterator & other ) const{
-  return {this->current != other.current}
+  return {this->current != other.current};
 }
