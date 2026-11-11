@@ -5,8 +5,8 @@
 class LibraryIterator {
     friend class Library;
     // *** fill in
-
-    explicit LibraryIterator( /*** fill in ***/ );  // Private constructor
+    Library::Node *current;
+    explicit LibraryIterator( Library::Node *current );  // Private constructor
 
 public:
     DigitalMedia * operator*() const;

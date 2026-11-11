@@ -9,7 +9,7 @@ bool getString( std::istream & in, std::string & s ) {
 
     // *** If getline fails to obtain the necessary argument, or the string
     // *** obtained is empty, return false (leaving s unchanged).
-
+    if(s.length() <1) return false;
     return true;
 } // getString
 
@@ -22,5 +22,6 @@ bool getInteger( std::istream & in, int & i ) {
     // *** i unchanged).
 
     i = std::stoi(s);
+    if(i<1) return false;
     return true;
 } // getInteger

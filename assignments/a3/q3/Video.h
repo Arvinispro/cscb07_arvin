@@ -6,6 +6,8 @@
 
 class Video: public DigitalMedia {
     // *** fill in
+    std::string channel;
+    int resolution;
 public:
     // Sets key, title, duration, channel, and resolution information.
     // If key.length() < 1 outputs to stderr: "key has length < 1".

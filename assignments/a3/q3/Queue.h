@@ -10,7 +10,14 @@ class Queue {
     friend class QueueIterator;
 
     // *** fill in
-
+    struct Node{
+        DigitalMedia *m;
+        Node *next;
+    };
+    Node *front;
+    Node *back;
+    int totalSecond;
+    int secondsPlayed;
 public:
     Queue();
     ~Queue();           // the media items themselves are owned by the Library

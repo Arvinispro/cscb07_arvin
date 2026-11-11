@@ -10,7 +10,11 @@ class Library {
     friend class LibraryIterator;
 
     // *** fill in
-
+    struct Node{
+        DigitalMedia *media;
+        Node *next;
+    };
+    Node *head;
 public:
     Library();                       // Creates empty library.
     ~Library();                      // Destroys all items in library.

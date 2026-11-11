@@ -5,8 +5,9 @@
 class QueueIterator {
     friend class Queue;
     // *** fill in
-
-    explicit QueueIterator( /*** fill in ***/ );  // Private constructor
+    Queue::Node *current;
+    int elapsed;
+    explicit QueueIterator( Queue::Node *current, int &elapsed);  // Private constructor
 
 public:
     // Time that will pass before the current item starts playing (0 at the front).

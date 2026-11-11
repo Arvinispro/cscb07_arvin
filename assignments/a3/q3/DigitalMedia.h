@@ -5,6 +5,10 @@
 
 class DigitalMedia {
     // *** fill in
+protected:
+    std::string key;
+    std::string title;
+    int duration;
 public:
     // Sets key, title and duration information.
     // If key.length() < 1 outputs to stderr: "key has length < 1".

@@ -6,6 +6,9 @@
 
 class Song: public DigitalMedia {
     // *** fill in
+    std::string artist;
+    std::string album;
+    std::string genre;
 public:
     // Sets key, title, duration, artist, album, and genre information.
     // If key.length() < 1 outputs to stderr: "key has length < 1".
