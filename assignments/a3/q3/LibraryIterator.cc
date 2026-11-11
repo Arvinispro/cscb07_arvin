@@ -11,5 +11,5 @@ bool LibraryIterator::operator==( const LibraryIterator& other ) const{
   return {this -> current == other.current};
 }
 bool LibraryIterator::operator!=( const LibraryIterator& other ) const{
-  return {this -> current == other.current};
+  return {this -> current != other.current};
 }
