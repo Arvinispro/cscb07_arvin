@@ -1,5 +1,5 @@
 #include "Song.h"
-
+#include "util.h"
 // Sets key, title, duration, artist, album, and genre information.
 // If key.length() < 1 outputs to stderr: "key has length < 1".
 // If title.length() < 1 outputs to stderr: "title has length < 1".
@@ -10,7 +10,7 @@
 // (Checks are made in order listed.)
 Song::Song( const std::string & key, const std::string & title, int duration, 
       const std::string & artist, const std::string & album, const std::string & genre ):
-      DigitalMidia{key, title, duration}{
+      DigitalMedia{key, title, duration}{
         if(artist.length() < 1){ 
           std::cerr << "artist has length < 1" << std::endl;
           return;
@@ -49,7 +49,7 @@ const std::string & Song::getGenre() const{
 // Returns modified output stream. Outputs (key, "title", "album", "artist", duration, "genre").
 // (Explicitly surrounds strings that might have whitespace within with double-quotation marks.)
 std::ostream & operator<<( std::ostream & out, const Song & s ){
-  s.print();
+  s.print(out);
   return out;
 }
 
