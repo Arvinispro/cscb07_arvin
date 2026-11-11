@@ -1,4 +1,4 @@
-#include "song.h"
+#include "Song.h"
 
 // Sets key, title, duration, artist, album, and genre information.
 // If key.length() < 1 outputs to stderr: "key has length < 1".
