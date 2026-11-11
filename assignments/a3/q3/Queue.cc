@@ -47,20 +47,64 @@ void Queue::remove( DigitalMedia * m ){
   if(this->front == nullptr) return;
   
   Node *last = nullptr;
-  Node *p = this->front->next;
-  // 1 element
-  if(p == nullptr){
-    if(this->front->m == m){
-      delete this->front;
-      this -> front = nullptr;
-      this -> back = nullptr;
-      this->totalSecond = 0;
+  Node *p = this->front;
+  
+  while(true){
+    if(front == back){
+      if(p->m == m){
+        delete this->front;
+        this -> front = nullptr;
+        this -> back = nullptr;
+        this->totalSecond = 0;
+      }
+      return;
     }
-    return;
+    else{
+      if(p==front){//looking at front
+        if(p->m==m){
+          this->totalSecond -= p->m->getDuration();
+          p = p->next;
+          delete front;
+          front = p;
+          continue;
+        }
+        else{
+          last = p;
+          p = p->next;
+          continue;
+        }
+      }
+      if(p==back){
+        if(p->m==m){
+          this->totalSecond -= p->m->getDuration();
+          delete back;
+          last->next = nullptr;
+          back = last;
+        }
+        return;
+      }
+      else{
+        if(p->m==m){
+          this->totalSecond -= p->m->getDuration();
+          last ->next = p->next;
+          delete p;
+          p = last->next;
+        }
+        else{
+          last = p;
+          p = p->next;
+          continue;
+        }
+      }
+
+    }
   }
+
   while(p!=nullptr){
     if(last == nullptr){ //p points at the first or right after deleting something
       if(p->m == m){
+        if(p==this->front) this->front = this->front->next;
+        if(front == bac
         this->totalSecond -= p->m->getDuration();
         last = p->next;
         delete p;
@@ -87,6 +131,8 @@ void Queue::remove( DigitalMedia * m ){
     }
     
   }
+  // 1 element
+  
 }
 
 void Queue::reset(){
