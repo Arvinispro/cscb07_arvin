@@ -113,12 +113,12 @@ std::istream & operator>>( std::istream& in, Library& library ){
       Song *s = new Song{ "S01", "Great beat and you can dance to it", 183, "Too cool", 
         "I'd give it a 10!", "Eclectic" };
       in >> *s;
-      library.add(s);
+      if(!in.fail()) library.add(s);
     }
     else if(type=="v"){
       Video *v = new Video{ "V01", "How to cook pasta", 612, "Chef Ana", 1080 };
       in >> *v;
-      library.add(v);
+      if(!in.fail()) library.add(v);
     }
     else if(type!=""){
       std::cout << type << std::endl;
