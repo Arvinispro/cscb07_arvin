@@ -13,11 +13,14 @@ void Queue::playNext( DigitalMedia * m ){
   Node *newmedia = new Node{m, this->front};
   this->totalSecond += m->getDuration();
   this->front = newmedia;
+  if(this->back==nullptr) this->back = newmedia;
 }  // adds m to the front of the queue
 void Queue::playLast( DigitalMedia * m ){
   Node *newmedia = new Node{m, nullptr};
   this->totalSecond += m->getDuration();
   this->back->next = newmedia;
+  if(this->front==nullptr) this->front = newmedia;
+
 }  // adds m to the back of the queue
 
 // "Plays" the item at the front of the queue: removes it from the queue, adds its
