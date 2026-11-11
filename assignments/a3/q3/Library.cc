@@ -103,12 +103,13 @@ std::istream & operator>>( std::istream& in, Library& library ){
   while(!in.eof() || in.fail()){
     std::getline(in, type);
     if(type=="s"){
-      Song *s;
+      Song *s = new Song{ "S01", "Great beat and you can dance to it", 183, "Too cool", 
+        "I'd give it a 10!", "Eclectic" };
       in >> *s;
       library.add(s);
     }
     else if(type=="v"){
-      Video *v;
+      Video *v = new Video{ "V01", "How to cook pasta", 612, "Chef Ana", 1080 };
       in >> *v;
       library.add(v);
     }

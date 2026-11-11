@@ -1,6 +1,6 @@
 #include "QueueIterator.h"
 #include "DigitalMedia.h"
-QueueIterator::QueueIterator(Queue::Node *current, int &elapsed): current{current}. elapsed{elapsed}{}
+QueueIterator::QueueIterator(Queue::Node *current, int elapsed): current{current}, elapsed{elapsed}{}
 
 // Time that will pass before the current item starts playing (0 at the front).
 int QueueIterator::getElapsedTime() const{
