@@ -20,8 +20,12 @@ bool getInteger( std::istream & in, int & i ) {
     // *** If getline fails to obtain the necessary argument, or the string cannot
     // *** be converted to an integer, or the value is < 1, return false (leaving
     // *** i unchanged).
-
-    i = std::stoi(s);
+    try{
+        i = std::stoi(s);
+    }
+    catch(...){
+        return false;
+    }
     if(i<1) return false;
     return true;
 } // getInteger
