@@ -14,6 +14,7 @@ DigitalMedia * QueueIterator::operator*() const{
 // Adds the duration of the current item to the elapsed time before moving the iterator
 // to the next item. Any change to the queue invalidates the iterator.
 QueueIterator QueueIterator::operator++(){
+  if(this->current == nullptr) return QueueIterator(nullptr, 0);
   this->elapsed += this->current->m->getDuration();
   return QueueIterator{this->current->next, this->elapsed};
 }

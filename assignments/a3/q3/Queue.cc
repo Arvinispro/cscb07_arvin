@@ -21,7 +21,7 @@ void Queue::playLast( DigitalMedia * m ){
 
   if(this->back == nullptr) this->back = newmedia;
   else this->back->next = newmedia;
-  
+
   if(this->front==nullptr) this->front = newmedia;
 
 }  // adds m to the back of the queue
