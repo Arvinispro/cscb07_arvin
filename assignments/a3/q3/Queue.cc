@@ -99,40 +99,6 @@ void Queue::remove( DigitalMedia * m ){
 
     }
   }
-
-  while(p!=nullptr){
-    if(last == nullptr){ //p points at the first or right after deleting something
-      if(p->m == m){
-        if(p==this->front) this->front = this->front->next;
-        if(front == bac
-        this->totalSecond -= p->m->getDuration();
-        last = p->next;
-        delete p;
-        p = last;
-        last = nullptr;
-      } 
-      else{
-        last = p;
-        p = p->next;
-      }
-    }
-    else{
-      if(p->m == m){
-        last -> next = p->next;
-        this->totalSecond -= p->m->getDuration();
-        delete p;
-        p = last->next;
-        last =nullptr;
-      }
-      else{
-        last = last->next;
-        p = last->next;
-      }
-    }
-    
-  }
-  // 1 element
-  
 }
 
 void Queue::reset(){
