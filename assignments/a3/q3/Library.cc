@@ -59,7 +59,7 @@ void Library::remove( const std::string& key ){
     return;
   }
   // 1 element
-  if(this->head->next = nullptr){
+  if(this->head->next == nullptr){
     if(this->head->media->getKey() == key){
       delete this->head->media;
       delete this->head;
