@@ -107,7 +107,7 @@ std::ostream & operator<<( std::ostream& out, const Library& library ){
 // by what type was read if doesn't get either 's' or 'v' (and then stops reading as well).
 std::istream & operator>>( std::istream& in, Library& library ){
   std::string type;
-  while(!in.eof() || !in.fail()){
+  while(!in.eof()){
     std::getline(in, type);
     if(type=="s"){
       Song *s = new Song{ "S01", "Great beat and you can dance to it", 183, "Too cool", 
@@ -124,6 +124,7 @@ std::istream & operator>>( std::istream& in, Library& library ){
       std::cout << type << std::endl;
       std::cerr << "invalid media type" << std::endl;
       in.setstate(std::ios::failbit);
+      break;
     }
   }
   return in;
