@@ -78,7 +78,7 @@ void Library::remove( const std::string& key ){
   }
 
   while(p != nullptr){
-    std::cout << p->media->getKey()<<std::endl;
+    // std::cout << p->media->getKey()<<std::endl;
     if(p->media->getKey() == key){
       last -> next = p -> next;
       delete p->media;
