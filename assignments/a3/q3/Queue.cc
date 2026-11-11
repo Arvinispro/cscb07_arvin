@@ -80,6 +80,7 @@ QueueIterator Queue::begin() const{
   return QueueIterator{this->front, 0};
 }        // Iterator set to the front of the queue.
 QueueIterator Queue::end() const{
+  if(this->back == nullptr) return QueueIterator(nullptr, 0);
   return QueueIterator{this->back, this->getTotalSeconds()-this->back->m->getDuration()};
 }  
 
