@@ -18,7 +18,7 @@ LibraryIterator Library::begin() const{
 LibraryIterator Library::end() const{
   Node *p = this->head;
   while(p != nullptr) p  = this->head->next;
-  return LibraryIterator{p}
+  return LibraryIterator{p};
 }     // Iterator set past end of library contents.
 
 // Stores item, indexed by key. If key already exists outputs to stderr
