@@ -24,9 +24,18 @@ LibraryIterator Library::end() const{
 // Stores item, indexed by key. If key already exists outputs to stderr
 // "key KKKK already exists in library" and item not stored (and is deleted).
 void Library::add( DigitalMedia* m ){
+  //0 element
   if(this->head==nullptr) {
     this->head = new Node{m, nullptr};
     return;
+  }
+  //1 element
+  if(this->head->next == nullptr){
+    if(this->head->media->getKey() > m->getKey()){
+      Node *newmedia = new Node{m, this->head};
+      this->head = newmedia;
+      return;
+    }
   }
   Node *last = this->head;
   Node *p = this->head->next;
@@ -84,7 +93,7 @@ DigitalMedia * Library::find( const std::string& key ) const{
 // for the underlying object type, one per line and starting with a tab character.
 std::ostream & operator<<( std::ostream& out, const Library& library ){
   out << "Library:" << std::endl;
-  for(LibraryIterator p=library.begin(); p != library.end(); ++p){
+  for(LibraryIterator p=library.begin(); p != library.end(); p=++p){
     out << "\t";
     (*p) -> print(out);
     out << std::endl;
