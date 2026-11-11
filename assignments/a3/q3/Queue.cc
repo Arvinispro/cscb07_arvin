@@ -33,14 +33,13 @@ void Queue::playLast( DigitalMedia * m ){
 // changes nothing) if the queue is empty.
 DigitalMedia * Queue::play(){
   if(this->front==nullptr) return nullptr;
-  Node *played = this->front;
+  Node played = *this->front;
 
-  this->front->next = nullptr;
   delete this->front;
-  this->front = played->next;
-
-  this->secondsPlayed += played->m->getDuration();
-  return played->m;
+  this->front = played.next;
+  
+  this->secondsPlayed += played.m->getDuration();
+  return played.m;
 }
 
 // Removes every occurrence of m from the queue. Does nothing if m isn't in the queue.
