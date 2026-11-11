@@ -69,18 +69,27 @@ void Library::remove( const std::string& key ){
   }
   Node *last = this->head;
   Node *p = this->head->next;
+  //head
+  if(last->media->getKey() == key){
+    delete this->head->media;
+    delete this->head;
+    this->head = p;
+    return;
+  }
+
   while(p != nullptr){
     std::cout << p->media->getKey()<<std::endl;
-    if(p->media->getKey() == key) break;
+    if(p->media->getKey() == key){
+      last -> next = p -> next;
+      delete p->media;
+      delete p;
+      return;
+    }
 
     last = last->next;
     p = p->next;
   }
-  last -> next = p -> next;
-  delete p->media;
-  p->next = nullptr;
-  delete p;
-  return;
+  
 } 
 
 // Returns pointer to item, or nullptr if not there.
