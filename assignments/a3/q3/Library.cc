@@ -29,13 +29,11 @@ void Library::add( DigitalMedia* m ){
     this->head = new Node{m, nullptr};
     return;
   }
-  //1 element
-  if(this->head->next == nullptr){
-    if(this->head->media->getKey() > m->getKey()){
-      Node *newmedia = new Node{m, this->head};
-      this->head = newmedia;
-      return;
-    }
+  //compare head
+  if(this->head->media->getKey() > m->getKey()){
+    Node *newmedia = new Node{m, this->head};
+    this->head = newmedia;
+    return;
   }
   Node *last = this->head;
   Node *p = this->head->next;
