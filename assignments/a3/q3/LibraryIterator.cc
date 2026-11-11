@@ -5,8 +5,8 @@ DigitalMedia * LibraryIterator::operator*() const{
   return current->media;
 }
 LibraryIterator LibraryIterator::operator++(){
-  // this -> current = this -> current -> next;
-  return LibraryIterator{current->next};
+  this -> current = this -> current -> next;
+  return LibraryIterator{current};
 }
 bool LibraryIterator::operator==( const LibraryIterator& other ) const{
   return {this -> current == other.current};
