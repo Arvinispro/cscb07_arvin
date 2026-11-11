@@ -46,29 +46,46 @@ DigitalMedia * Queue::play(){
 void Queue::remove( DigitalMedia * m ){
   if(this->front == nullptr) return;
   
-  Node *last = this->front;
+  Node *last = nullptr;
   Node *p = this->front->next;
   // 1 element
   if(p == nullptr){
-    if(last->m == m){
+    if(this->front->m == m){
+      delete this->front;
       this -> front = nullptr;
       this -> back = nullptr;
-      this->totalSecond -= last->m->getDuration();
-      delete last; 
+      this->totalSecond = 0;
     }
     return;
   }
-
   while(p!=nullptr){
-    if(p->m == m){
-      last -> next = p->next;
-      p->next = nullptr;
-      this->totalSecond -= p->m->getDuration();
-      delete p;
+    if(last == nullptr){ //p points at the first or right after deleting something
+      if(p->m == m){
+        this->totalSecond -= p->m->getDuration();
+        last = p->next;
+        delete p;
+        p = last;
+        last = nullptr;
+      } 
+      else{
+        last = p;
+        p = p->next;
+      }
     }
-    if(last->next == nullptr) break;
-    last = last->next;
-    p = last->next;
+    else{
+      if(p->m == m){
+        last -> next = p->next;
+        this->totalSecond -= p->m->getDuration();
+        delete p;
+        p = last->next;
+        last =nullptr;
+      }
+      else{
+        last = last->next;
+        p = last->next;
+      }
+    }
+    
   }
 }
 
