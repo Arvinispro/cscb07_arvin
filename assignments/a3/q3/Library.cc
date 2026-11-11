@@ -85,7 +85,7 @@ DigitalMedia * Library::find( const std::string& key ) const{
 std::ostream & operator<<( std::ostream& out, const Library& library ){
   out << "Library:" << std::endl;
   for(LibraryIterator p=library.begin(); p != library.end(); ++p){
-    out << "\t";
+    out << "\tsuccess?";
     (*p) -> print(out);
     out << std::endl;
   }
