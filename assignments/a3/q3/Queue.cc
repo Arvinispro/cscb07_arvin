@@ -81,7 +81,7 @@ QueueIterator Queue::begin() const{
 }        // Iterator set to the front of the queue.
 QueueIterator Queue::end() const{
   if(this->back == nullptr) return QueueIterator(nullptr, 0);
-  return QueueIterator{this->back, this->getTotalSeconds()-this->back->m->getDuration()};
+  return QueueIterator{nullptr, this->getTotalSeconds()-this->back->m->getDuration()};
 }  
 
 // Returns modified output stream. Outputs each item on its own line, in queue order, as
