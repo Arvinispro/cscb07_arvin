@@ -70,6 +70,7 @@ void Library::remove( const std::string& key ){
   Node *last = this->head;
   Node *p = this->head->next;
   while(p != nullptr){
+    std::cout << p->media->getKey()<<std::endl;
     if(p->media->getKey() == key) break;
 
     last = last->next;
