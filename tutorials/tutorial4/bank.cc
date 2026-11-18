@@ -37,8 +37,10 @@ Bank::~Bank() {
 void Bank::grow() {
   Account *bigger = new Account[capacity * 2];
   for (int i = 0; i < count; ++i) bigger[i] = accounts[i];
+  delete [] accounts;
   accounts = bigger;
   capacity *= 2;
+
 }
 
 void Bank::open(int id, double balance) {
