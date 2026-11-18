@@ -31,7 +31,7 @@ struct Bank {
 Bank::Bank(int cap): accounts{new Account[cap]}, capacity{cap}, count{0} {}
 
 Bank::~Bank() {
-  delete accounts;
+  delete [] accounts;
 }
 
 void Bank::grow() {
@@ -52,8 +52,8 @@ void Bank::printAll() const {
 
 int Bank::emptySlots() const {
   int empty = 0;
-  int i = capacity;
-  while (i >= 0) {
+  int i = capacity-1; //add -1
+  while (i >= 0) { 
     if (accounts[i].id == 0) ++empty;
     --i;
   }
