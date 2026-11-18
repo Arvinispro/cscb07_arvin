@@ -15,8 +15,14 @@ struct Card {
   char suit;  // one of the characters in SUITS
 
   // Fill in the return type
-  ___ operator<=>(const Card& other) const {
+  auto operator<=>(const Card& other) const {
     // Fill in this operator overload
+    auto rankComp = RANKS.find(this->rank) <=> RANKS.find(other.rank);
+    if(rankComp == 0){
+      auto suitComp = SUITS.find(this->suit) <=> SUITS.find(other.suit);
+      return suitComp;
+    }
+    return rankComp;
   }
 };
 

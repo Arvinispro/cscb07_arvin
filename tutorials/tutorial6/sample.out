@@ -1,0 +1,7 @@
+Accounts: 4
+0: #1 Chequing[Main, 1] "Alice" 105 [20 -15]
+1: (moved-from)
+2: #3 Chequing[Main, 0] "Alice" 105 [20 -15]
+3: #2 Savings[3%] "Bob" 50 []
+Live accounts: 4
+Queries: 1
