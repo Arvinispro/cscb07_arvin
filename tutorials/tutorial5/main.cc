@@ -12,22 +12,23 @@ public:
   Pokemon(const string &nickname): nickname{nickname} {}
 
   // TODO: Pokemon are deleted through Pokemon pointers (see Party).
-  ~Pokemon() {}
+  virtual ~Pokemon()=0;
 
   // TODO: Pokemon must be an abstract class. Make these two methods
   // pure virtual (and remove the placeholder bodies).
-  virtual string species() const { return ""; }
-  virtual string moveName(int i) const { return ""; }
+  virtual string species() const =0;
+  virtual string moveName(int i) const =0;
 
   string attack(int i) const { return nickname + " used " + moveName(i) + "!"; }
 
   // TODO: operator<< needs access to nickname. Declare it here.
+  friend ostream &operator<<(ostream &out, const Pokemon &p); 
 };
 
 // TODO: fix operator<<. It must print the nickname, a space, and the species
 // in parentheses, e.g.  Sparky (Pikachu)
 ostream &operator<<(ostream &out, const Pokemon &p) {
-  return out << p.species();  
+  return out << p.nickname << " (" << p.species() << ")";  
 }
 
 // ---------------------------------------------------------------------
@@ -40,22 +41,27 @@ class Pikachu final: public Pokemon {
 public:
   // TODO: pass the nickname to the superclass constructor, and make moves
   // point to a new heap array of 3 strings.
-  Pikachu(const string &nickname): Pokemon{nickname}, moves{} {
+  Pikachu(const string &nickname): Pokemon{nickname}, moves{nullptr} {
     // TODO: fill in the three moves, in order (see the table in the
     // problem set).
+    moves = new string[3]{"Thunderbolt", "Quick Attack", "Iron Tail"};
+
   }
 
   // TODO: Pikachu owns the moves array. Free it here. Remember that it was
   // allocated as an array.
-  ~Pikachu() {
+  ~Pikachu() override{
+    delete [] moves;
   }
 
   // TODO: return this Pokemon's species as a string.
   string species() const override {
+    return "Pikachu";
   }
 
   // TODO: return the name of move i.
   string moveName(int i) const override {
+    return moves[i];
   }
 };
 
@@ -63,16 +69,48 @@ public:
 // Species "Charmander"; moves, in order: Ember, Scratch, Flamethrower.
 // Remember: no one should ever subclass a concrete species.
 class Charmander: public Pokemon {
+  string *moves;
 public:
-  Charmander(const string &nickname): Pokemon{nickname} {}
+  Charmander(const string &nickname): Pokemon{nickname} {
+    moves = new string[3]{"Ember", "Scratch", "Flamethrower"};
+  }
+  ~Charmander() override{
+    delete [] moves;
+  }
+
+  // TODO: return this Pokemon's species as a string.
+  string species() const override {
+    return "Charmander";
+  }
+
+  // TODO: return the name of move i.
+  string moveName(int i) const override {
+    return moves[i];
+  }
 };
 
 // TODO: finish class Squirtle, following the same pattern as Pikachu.
 // Species "Squirtle"; moves, in order: Water Gun, Tackle, Bubble.
 // Remember: no one should ever subclass a concrete species.
 class Squirtle: public Pokemon {
+  string *moves;
 public:
-  Squirtle(const string &nickname): Pokemon{nickname} {}
+  Squirtle(const string &nickname): Pokemon{nickname} {
+    moves = new string[3]{"Water Gun", "Tackle", "Bubble"};
+  }
+  ~Squirtle() override{
+    delete [] moves;
+  }
+
+  // TODO: return this Pokemon's species as a string.
+  string species() const override {
+    return "Squirtle";
+  }
+
+  // TODO: return the name of move i.
+  string moveName(int i) const override {
+    return moves[i];
+  }
 };
 
 // ---------------------------------------------------------------------
