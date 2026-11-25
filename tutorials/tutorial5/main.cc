@@ -12,7 +12,7 @@ public:
   Pokemon(const string &nickname): nickname{nickname} {}
 
   // TODO: Pokemon are deleted through Pokemon pointers (see Party).
-  virtual ~Pokemon()=0;
+  virtual ~Pokemon(){};
 
   // TODO: Pokemon must be an abstract class. Make these two methods
   // pure virtual (and remove the placeholder bodies).
