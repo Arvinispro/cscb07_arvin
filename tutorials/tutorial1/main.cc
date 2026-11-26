@@ -15,14 +15,17 @@ int main(){
         count++;
       }
       // std::cout << count << std::endl;
-      if(count > biggest){
-        f_big = f_line;
-        biggest = count;
+      if(count!=0){
+        if(count > biggest){
+          f_big = f_line;
+          biggest = count;
+        }
+        if(count < smallest){
+          f_small = f_line;
+          smallest = count;
+        }
       }
-      if(count < smallest){
-        f_small = f_line;
-        smallest = count;
-      }
+      
       // std::cout << smallest << std::endl;
     }
     std::cout << f_small << std::endl << f_big << std::endl;
