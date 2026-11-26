@@ -9,41 +9,61 @@ using namespace std;
 // TODO: Counter must be a class template with one type parameter, named T:
 // the type of the items that are counted. Write the template header before
 // "class Counter".
+template <typename T>
 class Counter {
   // TODO: declare the member "counts": a map from an item (of type T) to the
   // number of times it was added (an int).
 
+  map<T, int> counts;
 public:
   // TODO: add one occurrence of item. Declare the parameter "item": its type
   // is T, passed by const reference. Think about what happens the first time
   // an item is added: a map's operator[] inserts a missing key with a
   // default-constructed value.
-  void add(/* TODO: parameter */) {
+  void add(const T &item) {
+    ++counts[item];
   }
 
   // TODO: return the number of times item was added (0 if never, or if it was
   // removed). Declare the parameter "item" in the same way as for add. This is
   // a const method, and it must NOT insert item into the map. Hint: operator[]
   // is not available on a const map. Use find (or count) instead.
-  int count(/* TODO: parameter */) const {
+  int count(const T &item) const {
+    auto p = counts.find(item);
+    if(p!=counts.end()) return p -> second;
     return 0;
   }
 
   // TODO: forget item completely. Declare the parameter "item" in the same
   // way as for add. Do nothing if item is not present.
-  void remove(/* TODO: parameter */) {
+  void remove(const T &item) {
+    counts.erase(item);
   }
 
   // TODO: forget every item that was added fewer than n times.
   // Be careful when you erase inside a loop over the map: after erase, the
   // iterator you erased is invalid. Erase returns an iterator to use instead.
   void removeBelow(int n) {
+    for (auto p = counts.begin(); p != counts.end();) {
+        if(p -> second < n){
+          auto q = p;
+          ++p;
+          counts.erase(q -> first);
+        }
+        else{
+          ++p;
+        }
+    }
   }
 
   // TODO: print "Distinct: " and the number of distinct items, then one line
   // "item: count" for each item, in sorted order. Use a range-based for loop
   // with a structured binding to get the item and its count.
   void print() const {
+    cout << "Distinct: " << counts.size() << endl;
+    for (auto &[key, value] : counts) {
+        cout << key << ": " << value << endl;
+    }
   }
 };
 

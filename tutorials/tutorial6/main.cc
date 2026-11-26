@@ -12,7 +12,8 @@ class AbstractAccount {
   // TODO: declare two static fields here: one that hands out ids (the
   // first account gets id 1), and one that counts the AbstractAccount
   // objects that are currently alive.
-
+  inline static int nextId = 1;
+  inline static int accountCount=0;
   int id;
   string owner;
   int balance;
@@ -42,30 +43,36 @@ public:
 
   // TODO: this must return the number of AbstractAccount objects currently
   // alive (it is static: it belongs to the class, not to an account).
-  static int howMany() { return 0; }
+  static int howMany() { return accountCount; }
 };
 
 // TODO: a new account gets the next id, and must be counted.
 AbstractAccount::AbstractAccount(const string &owner, int initial):
-  id{0}, owner{owner}, balance{initial},
-  history{new int[maxTx]}, numTx{0} {}
+  id{nextId}, owner{owner}, balance{initial},
+  history{new int[maxTx]}, numTx{0} {
+    ++nextId;
+    ++accountCount;
+  }
 
 // A copy is a new account: it gets a new id, and its own history array.
 AbstractAccount::AbstractAccount(const AbstractAccount &other):
-  id{0}, owner{other.owner}, balance{other.balance},
-  history{new int[maxTx]}, numTx{other.numTx} {
+  id{nextId}, owner{other.owner}, balance{other.balance},
+  history{new int[maxTx]}, numTx{other.numTx}, numQueries{0} {
   for (int i = 0; i < numTx; ++i) history[i] = other.history[i];
   // TODO: the copy gets the next id, and must be counted.
+  ++nextId;
+  ++accountCount;
 }
 
 // A move transfers the same account: the new object takes the id.
 AbstractAccount::AbstractAccount(AbstractAccount &&other):
   id{other.id}, owner{std::move(other.owner)}, balance{other.balance},
-  history{other.history}, numTx{other.numTx} {
+  history{other.history}, numTx{other.numTx}, numQueries{0} {
   other.id = 0;
   other.history = nullptr;
   other.numTx = 0;
   // TODO: this new object must be counted. (It takes the source's id.)
+  ++accountCount;
 }
 
 // Assignment keeps this object's identity (id and numQueries).
@@ -100,6 +107,7 @@ AbstractAccount &AbstractAccount::operator=(AbstractAccount &&other) {
 AbstractAccount::~AbstractAccount() {
   delete [] history;
   // TODO: this object is no longer alive.
+  --accountCount;
 }
 
 // ---------------------------------------------------------------------
@@ -118,14 +126,32 @@ public:
 
   // TODO: copy constructor. A copy starts with a fresh cheque book:
   // cheques stays 0.
+  Chequing(const Chequing &other):AbstractAccount{other}, branch{other.branch}, cheques{0}{
 
+  } 
   // TODO: copy assignment. Copy branch and cheques. Return *this.
+  Chequing &operator=(const Chequing &other){
+    AbstractAccount::operator=(other);
 
+    branch = other.branch;
+    cheques = other.cheques;
+    return *this;
+  }
   // TODO: move constructor. Careful: the argument is an lvalue. Move branch,
   // and transfer cheques.
-
+  Chequing(Chequing &&other):AbstractAccount{std::move(other)}{
+    branch = std::move(other.branch);
+    cheques = other.cheques;
+    other.cheques=0;
+  } 
   // TODO: move assignment. Move branch, and transfer cheques. Return *this.
-
+  Chequing &operator=(Chequing &&other){
+    AbstractAccount::operator=(std::move(other));
+    branch = std::move(other.branch);
+    cheques = other.cheques;
+    other.cheques = 0;
+    return *this;
+  }
   void writeCheque(int amount) { post(-amount); ++cheques; }
 
   string kind() const override {
@@ -143,7 +169,28 @@ public:
   // TODO: copy constructor, copy assignment, move constructor and move
   // assignment, in the same way as Chequing. All of them copy or transfer
   // rate (there is no special rule for Savings).
+  // TODO: copy constructor. A copy starts with a fresh cheque book:
+  // cheques stays 0.
+  Savings(const Savings &other):AbstractAccount{other}, rate{other.rate}{
 
+  } 
+  // TODO: copy assignment. Copy branch and cheques. Return *this.
+  Savings &operator=(const Savings &other){
+    AbstractAccount::operator=(other);
+    rate = other.rate;
+    return *this;
+  }
+  // TODO: move constructor. Careful: the argument is an lvalue. Move branch,
+  // and transfer cheques.
+  Savings(Savings &&other):AbstractAccount{std::move(other)}{
+    rate = other.rate;
+  } 
+  // TODO: move assignment. Move branch, and transfer cheques. Return *this.
+  Savings &operator=(Savings &&other){
+    AbstractAccount::operator=(std::move(other));
+    rate = other.rate;
+    return *this;
+  }
   string kind() const override { return "Savings[" + to_string(rate) + "%]"; }
 };
 
