@@ -3,7 +3,7 @@ import <string>;
 import <sstream>;
 
 int main(){
-  std::string f, f_line, f_word, f_big, f_small;
+  std::string f, f_line, f_word, f_big="", f_small="";
   int biggest=-1, smallest=2147483647, count;
   // for each line
     while(!std::cin.eof()){
